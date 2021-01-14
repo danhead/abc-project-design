@@ -3,8 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../../layout";
 import Header from "../../components/header";
 
-export default function Index({ location, data }) {
-  console.log(location);
+export default function Index({ data }) {
   return (
     <Layout>
       <Header image={data.headerImage.childImageSharp.fluid}>

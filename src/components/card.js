@@ -49,7 +49,7 @@ export default function Card({ image, children, to }) {
           <Img
             style={{
               display: "block",
-              "border-radius": "5px"
+              borderRadius: "5px"
             }}
             fixed={image}
           />

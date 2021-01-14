@@ -85,8 +85,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function Layout({ location, children }) {
-  console.log(location);
+export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -108,6 +107,7 @@ export default function Layout({ location, children }) {
   `);
   const { title, description, keywords, navData } = data.site.siteMetadata;
   const [navOpen, setNavOpen] = useState();
+  const [loaded, setLoaded] = useState();
   return (
     <>
       <main>
@@ -117,12 +117,17 @@ export default function Layout({ location, children }) {
             { name: "description", content: description },
             { name: "keywords", content: keywords }
           ]}
+          onChangeClientState={() => setLoaded(true)}
         />
         <GlobalStyle navOpen={navOpen} />
-        {children}
-        <Footer />
+        {loaded && (
+          <>
+            {children}
+            <Footer />
+          </>
+        )}
       </main>
-      <Nav data={navData} open={navOpen} setOpen={setNavOpen} />
+      {loaded && <Nav data={navData} open={navOpen} setOpen={setNavOpen} />}
     </>
   );
 }

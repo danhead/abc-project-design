@@ -68,7 +68,7 @@ const Title = styled.p`
   color: var(--theme-color-dark);
 `;
 
-const SmallIcon = styled.div`
+const SmallIcon = styled.span`
   display: inline-block;
   width: 16px;
   height: 16px;

@@ -24,7 +24,6 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-export default function NavLink({ location, children, to }) {
-  console.log(location);
+export default function NavLink({ children, to }) {
   return <Link to={to}>{children}</Link>;
 }
