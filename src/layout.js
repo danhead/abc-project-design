@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import Nav from "./components/nav";
 import Footer from "./components/footer";
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/cooper-hewitt/400.css";
@@ -65,6 +66,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     font-family: 'Cooper Hewitt', sans-serif; 
+    overflow-x: hidden;
     overflow-y: ${props => (props.navOpen ? "hidden" : "auto")};
   }
 
@@ -83,7 +85,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ location, children }) {
+  console.log(location);
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -91,11 +94,20 @@ export default function Layout({ children }) {
           title
           description
           keywords
+          navData {
+            title
+            to
+            subNav {
+              title
+              to
+            }
+          }
         }
       }
     }
   `);
-  const { title, description, keywords } = data.site.siteMetadata;
+  const { title, description, keywords, navData } = data.site.siteMetadata;
+  const [navOpen, setNavOpen] = useState();
   return (
     <>
       <main>
@@ -106,10 +118,11 @@ export default function Layout({ children }) {
             { name: "keywords", content: keywords }
           ]}
         />
-        <GlobalStyle />
+        <GlobalStyle navOpen={navOpen} />
         {children}
         <Footer />
       </main>
+      <Nav data={navData} open={navOpen} setOpen={setNavOpen} />
     </>
   );
 }

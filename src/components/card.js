@@ -1,11 +1,11 @@
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
-  overflow: hidden;
   margin: 0 calc(var(--spacing-x-xs) * -1) var(--spacing-y-sm);
 
   @media (max-width: 30em) {
@@ -15,15 +15,34 @@ const Container = styled.div`
   }
 `;
 
-const Media = styled.div`
+const Media = styled.span`
   padding: 0 var(--spacing-x-xs);
+  transition: transform 0.15s ease-in, filter 0.15s ease-in;
 `;
-const Content = styled.div`
+
+const Content = styled.span`
   padding: 0 var(--spacing-x-xs);
 `;
 
-export default function Card({ image, children }) {
-  return (
+const Link = styled(GatsbyLink)`
+  outline: 0;
+  text-decoration: none;
+  color: var(--color-black);
+
+  &:hover ${Media} {
+    transform: scale(1.1);
+    filter: brightness(110%) contrast(110%);
+  }
+
+  @media (max-width: 30em) {
+    &:nth-child(even) ${Container} {
+      flex-direction: row-reverse;
+    }
+  }
+`;
+
+export default function Card({ image, children, to }) {
+  const render = () => (
     <Container>
       {image && (
         <Media>
@@ -39,4 +58,5 @@ export default function Card({ image, children }) {
       <Content>{children}</Content>
     </Container>
   );
+  return to ? <Link to={to}>{render()}</Link> : render();
 }

@@ -9,6 +9,15 @@ const Container = styled.button`
   background-color: transparent;
   padding: 4px 8px;
   border: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media (min-width: 30em) {
+    display: none;
+  }
 `;
 
 const Bar = styled.span`

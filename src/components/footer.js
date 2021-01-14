@@ -10,6 +10,7 @@ const Content = styled.div`
   max-width: var(--theme-max-width);
   margin: 0 auto;
   padding: var(--spacing-y-lg) var(--spacing-x-sm);
+  font-size: var(--font-size-sm);
   text-align: center;
 `;
 

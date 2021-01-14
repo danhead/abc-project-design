@@ -5,7 +5,42 @@ module.exports = {
     title: `Abc Project Design`,
     description: `Easy as ABC`,
     keywords: `Foo bar baz`,
-    navData: [],
+    navData: [
+      {
+        title: "Home",
+        to: "/"
+      },
+      {
+        title: "Services",
+        to: "/services",
+        subNav: [
+          {
+            title: "Bathrooms",
+            to: "/services/bathrooms"
+          },
+          {
+            title: "Tiling",
+            to: "/services/tiling"
+          },
+          {
+            title: "Electrics",
+            to: "/services/electrics"
+          },
+          {
+            title: "Carpentry",
+            to: "/services/carpentry"
+          }
+        ]
+      },
+      {
+        title: "About",
+        to: "/about"
+      },
+      {
+        title: "Contact",
+        to: "/contact"
+      }
+    ],
     reviews: [
       {
         name: "Rated People",

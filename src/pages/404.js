@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../layout";
 import Header from "../components/header";
 import HeaderLogo from "../components/header-logo";
@@ -9,10 +9,12 @@ export default function Index({ data }) {
   return (
     <Layout>
       <Header image={data.headerImage.childImageSharp.fluid}>
-        <HeaderLogo visible={true} />
         <h2>404</h2>
       </Header>
-      <Section variant="primary">oops.</Section>
+      <Section>
+        <p>Page not found</p>
+        <Link to="/">Back Home</Link>
+      </Section>
     </Layout>
   );
 }

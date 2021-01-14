@@ -1,60 +1,86 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
-import NavLink from "./nav-link";
+import NavItem from "./nav-item";
 import MenuButton from "./menu-button";
+import LogoArrows from "../icons/logo-arrows.svg";
 
 const Container = styled.div`
-  position: ${props => (props.open ? "fixed" : "absolute")};
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
   z-index: 6;
+  background-color: ${props =>
+    props.open ? `rgba(0, 0, 0, 0.8)` : `rgba(0, 0, 0, 0.4)`};
+  backdrop-filter: blur(2px);
   transform: ${props =>
-    props.open ? `translate3d(0, 0, 0)` : `translate3d(100%, 0, 0)`};
-  transition: transform 0.15s;
-
+    props.open
+      ? `translate3d(0, 0, 0)`
+      : `translate3d(0, calc(-100% + 40px), 0)`};
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   @media (min-width: 30em) {
-    bottom: auto;
-    left: 0;
+    position: absolute;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2px);
+    flex-direction: row;
+    bottom: auto;
+    background-color: rgba(0, 0, 0, 0.6);
     transform: none;
     transition: none;
   }
 `;
 
 const Menu = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: var(--spacing-y-xs) var(--spacing-x-md) 0 0;
-  transform: translateX(-100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  color: white;
+  margin: var(--spacing-x-xs) var(--spacing-y-sm);
+`;
 
-  @media (min-width: 30em) {
-    display: none;
+const Heading = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  opacity: ${props => (props.visible ? 1 : 0)};
+  transform: opacity 0.3s ease-in;
+
+  svg {
+    width: 24px;
+    height: 12px;
+
+    &:first-of-type {
+      path:first-child {
+        fill: var(--theme-color-primary);
+      }
+
+      path:last-child {
+        fill: var(--theme-color-secondary);
+      }
+    }
+    &:last-of-type {
+      transform: rotate(180deg);
+      path:first-child {
+        fill: var(--theme-color-dark);
+      }
+
+      path:last-child {
+        fill: var(--theme-color-secondary);
+      }
+    }
   }
 `;
 
 const Content = styled.nav`
-  margin: 0 var(--spacing-x-sm);
+  flex-grow: 1;
+  margin: var(--spacing-y-lg) var(--spacing-x-md);
 
-  @media (max-width: 30em) {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-`;
-
-const Overlay = styled.div`
-  @media (max-width: 30em) {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    display: ${props => (props.visible ? `block` : `none`)};
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(2px);
+  @media (min-width: 30em) {
+    display: flex;
+    margin: 0;
   }
 `;
 
@@ -70,25 +96,25 @@ const List = styled.ul`
 `;
 
 export default function Nav({ data, open, setOpen }) {
-  const handleOverlayClick = () => setOpen(false);
   const handleButtonClick = () => setOpen(!open);
   return (
-    <>
-      <Container open={open}>
-        <Menu>
-          <MenuButton open={open} onClick={handleButtonClick} />
-        </Menu>
-        <Content>
-          <List>
-            {data.map((link, i) => (
-              <NavLink key={i} subNav={link.subNav} to={link.to}>
-                {link.title}
-              </NavLink>
-            ))}
-          </List>
-        </Content>
-      </Container>
-      <Overlay visible={open} onClick={handleOverlayClick} />
-    </>
+    <Container open={open}>
+      <Menu>
+        <Heading to="/" visible={!open}>
+          <LogoArrows />
+          <LogoArrows />
+        </Heading>
+        <MenuButton open={open} onClick={handleButtonClick} />
+      </Menu>
+      <Content>
+        <List>
+          {data.map((link, i) => (
+            <NavItem key={i} subNav={link.subNav} to={link.to}>
+              {link.title}
+            </NavItem>
+          ))}
+        </List>
+      </Content>
+    </Container>
   );
 }

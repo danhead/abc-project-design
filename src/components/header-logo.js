@@ -79,7 +79,7 @@ const Slogan = styled.p`
 
 export default function HeaderLogo({ transition }) {
   const [visible, setVisible] = useState(!transition);
-  useEffect(() => transition && setVisible(true));
+  useEffect(() => transition && setVisible(true), [transition]);
   return (
     <Container>
       <Top visible={visible}>

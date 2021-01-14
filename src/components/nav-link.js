@@ -1,56 +1,30 @@
 import React from "react";
-import styled, { css } from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
+import styled from "styled-components";
 
-const SubList = styled.ul`
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  min-width: 120px;
-  margin: 0;
+const Link = styled(GatsbyLink)`
+  display: inline-block;
   padding: 0;
-  list-style: none;
-`;
+  margin-bottom: var(--spacing-y-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  text-decoration: none;
+  cursor: pointer;
 
-const ListItem = styled.li`
-  position: relative;
-  margin: 0 var(--spacing-y-xs);
+  &:focus {
+    outline: none;
+  }
 
-  &:hover ${SubList} {
-    @media (min-width: 40rem) {
-      display: flex;
-    }
+  @media (min-width: 30em) {
+    font-size: var(--font-size-sm);
+    margin: 0 var(--spacing-x-xs);
+    padding: 9px 0;
+    border-bottom: 2px solid
+      ${props => (props.active ? `var(--color-white)` : `transparent`)};
   }
 `;
 
-const Link = styled(GatsbyLink)`
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-  margin-top: var(--spacing-y-xs);
-  border-bottom: 2px solid transparent;
-
-  ${props =>
-    props.active &&
-    css`
-      border-color: var(--color-white);
-    `}
-`;
-
-export default function NavLink({ children, subLinks, ...other }) {
-  return (
-    <ListItem>
-      <Link {...other}>{children}</Link>
-      {subLinks && subLinks.length > 0 && (
-        <SubList>
-          {subLinks.map((link, i) => (
-            <Link to={link.to} key={i}>
-              {link.title}
-            </Link>
-          ))}
-        </SubList>
-      )}
-    </ListItem>
-  );
+export default function NavLink({ location, children, to }) {
+  console.log(location);
+  return <Link to={to}>{children}</Link>;
 }
