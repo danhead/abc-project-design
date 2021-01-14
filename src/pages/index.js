@@ -13,7 +13,7 @@ export default function Index({ data }) {
   return (
     <Layout>
       <Header image={data.headerImage.childImageSharp.fluid}>
-        <HeaderLogo />
+        <HeaderLogo transition={true} />
       </Header>
       <Section>
         <Text>

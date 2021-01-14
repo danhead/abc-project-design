@@ -77,10 +77,12 @@ const Heading = styled(Link)`
 const Content = styled.nav`
   flex-grow: 1;
   margin: var(--spacing-y-lg) var(--spacing-x-md);
+  overflow-y: auto;
 
   @media (min-width: 30em) {
     display: flex;
     margin: 0;
+    overflow-y: visible;
   }
 `;
 

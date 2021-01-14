@@ -14,6 +14,8 @@ const Top = styled.div`
   filter: grayscale(100%);
   opacity: 0;
   transform: translate3d(0, 50%, 0);
+  transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
+    transform 0.5s ease-in 0.5s;
 
   path:first-child {
     fill: var(--theme-color-primary);
@@ -35,6 +37,7 @@ const Top = styled.div`
 const Middle = styled.div`
   width: 100vw;
   opacity: 0;
+  transition: opacity 0.5s ease-in 0.75s;
   ${props =>
     props.visible &&
     css`
@@ -48,6 +51,8 @@ const Bottom = styled.div`
   filter: grayscale(100%);
   opacity: 0;
   transform: translate3d(0, -50%, 0) rotate(180deg);
+  transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
+    transform 0.5s ease-in 0.5s;
 
   path:first-child {
     fill: var(--theme-color-dark);
