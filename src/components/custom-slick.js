@@ -19,14 +19,10 @@ const Button = styled.button`
   border: none;
   margin: 0;
   padding: 0;
-  opacity: 0.5;
+  opacity: 0;
   transform: translateY(-50%);
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
-
-  &:hover {
-    opacity: 1;
-  }
 
   svg {
     width: 32px;
@@ -44,6 +40,17 @@ const StyledButton = ({ to, onClick }) => (
     {to === "prev" ? <LeftArrow /> : <RightArrow />}
   </Button>
 );
+
+const Container = styled.div`
+  &:hover button {
+    opacity: 0.5;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+`;
+
 export default function CustomSlick({ children }) {
   const slick = useRef();
   const settings = {
@@ -59,8 +66,10 @@ export default function CustomSlick({ children }) {
     slick.current.slickPlay();
   }, [slick]);
   return (
-    <Slick ref={slick} {...settings}>
-      {children}
-    </Slick>
+    <Container>
+      <Slick ref={slick} {...settings}>
+        {children}
+      </Slick>
+    </Container>
   );
 }
