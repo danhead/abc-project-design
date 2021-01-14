@@ -11,8 +11,6 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
-  flex-direction: column-reverse;
   z-index: 6;
   background-color: ${props =>
     props.open ? `rgba(0, 0, 0, 0.8)` : `rgba(0, 0, 0, 0.4)`};
@@ -24,12 +22,21 @@ const Container = styled.div`
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   @media (min-width: 30em) {
     position: absolute;
-    display: flex;
-    flex-direction: row;
     bottom: auto;
     background-color: rgba(0, 0, 0, 0.6);
     transform: none;
     transition: none;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  max-width: var(--theme-max-width);
+  margin: 0 auto;
+  @media (min-width: 30em) {
+    flex-direction: row;
   }
 `;
 
@@ -101,22 +108,24 @@ export default function Nav({ data, open, setOpen }) {
   const handleButtonClick = () => setOpen(!open);
   return (
     <Container open={open}>
-      <Menu>
-        <Heading to="/" visible={!open}>
-          <LogoArrows />
-          <LogoArrows />
-        </Heading>
-        <MenuButton open={open} onClick={handleButtonClick} />
-      </Menu>
-      <Content>
-        <List>
-          {data.map((link, i) => (
-            <NavItem key={i} subNav={link.subNav} to={link.to}>
-              {link.title}
-            </NavItem>
-          ))}
-        </List>
-      </Content>
+      <Wrapper>
+        <Menu>
+          <Heading to="/" visible={!open}>
+            <LogoArrows />
+            <LogoArrows />
+          </Heading>
+          <MenuButton open={open} onClick={handleButtonClick} />
+        </Menu>
+        <Content>
+          <List>
+            {data.map((link, i) => (
+              <NavItem key={i} subNav={link.subNav} to={link.to}>
+                {link.title}
+              </NavItem>
+            ))}
+          </List>
+        </Content>
+      </Wrapper>
     </Container>
   );
 }
