@@ -110,7 +110,7 @@ export default function Nav({ data, open, setOpen }) {
     <Container open={open}>
       <Wrapper>
         <Menu>
-          <Heading to="/" visible={!open}>
+          <Heading to="/" visible={!open} aria-label="Back home">
             <LogoArrows />
             <LogoArrows />
           </Heading>
