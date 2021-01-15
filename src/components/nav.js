@@ -119,7 +119,13 @@ export default function Nav({ data, open, setOpen }) {
         <Content>
           <List>
             {data.map((link, i) => (
-              <NavItem key={i} subNav={link.subNav} to={link.to}>
+              <NavItem
+                key={i}
+                index={i}
+                subNav={link.subNav}
+                to={link.to}
+                open={open}
+              >
                 {link.title}
               </NavItem>
             ))}

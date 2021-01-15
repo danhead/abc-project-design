@@ -26,17 +26,24 @@ const ListItem = styled.li`
       display: flex;
     }
   }
+
+  @media (max-width: 30em) {
+    transform: ${props =>
+      props.open ? `translate3d(0, 0, 0)` : `translate3d(-100%, 0, 0)`};
+    transition: transform 0.3s ease-in-out
+      calc(0.3s + (${props => props.index} * 0.1s));
+  }
 `;
 
-export default function NavItem({ children, subNav, ...other }) {
+export default function NavItem({ children, subNav, index, open, ...other }) {
   const hasChildren = subNav && subNav.length > 0;
   return (
-    <ListItem>
+    <ListItem open={open} index={index}>
       <NavLink {...other}>{children}</NavLink>
       {hasChildren && (
         <SubList>
           {subNav.map((link, i) => (
-            <ListItem key={i}>
+            <ListItem key={i} index={i} open={open}>
               <NavLink to={link.to}>{link.title}</NavLink>
             </ListItem>
           ))}
