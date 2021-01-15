@@ -117,6 +117,9 @@ export default function Layout({ children }) {
             { name: "description", content: description },
             { name: "keywords", content: keywords }
           ]}
+          htmlAttributes={{
+            lang: "en"
+          }}
           onChangeClientState={() => setLoaded(true)}
         />
         <GlobalStyle navOpen={navOpen} />
