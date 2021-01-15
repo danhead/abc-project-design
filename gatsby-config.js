@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `Abc Project Design`,
+    title: `ABC Project Design`,
     description: `Easy as ABC`,
     keywords: `Foo bar baz`,
     navData: [
@@ -61,6 +61,18 @@ module.exports = {
     ]
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ABC Project Design`,
+        short_name: `ABC`,
+        start_url: `/`,
+        icon: `src/images/icon.png`,
+        background_color: `#e5ffde`,
+        theme_color: `#9c0905`,
+        display: `standalone`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
