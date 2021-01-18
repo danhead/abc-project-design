@@ -8,11 +8,8 @@ const StyledText = styled.p`
     css`
       font-style: ${props.textStyle};
     `}
-  ${props =>
-    props.size === "sm" &&
-    css`
-      font-size: var(--font-size-sm);
-    `}
+  font-size: ${props => `var(--font-size-${props.size})`};
+  color: ${props => `var(--theme-color-${props.color})`};
 `;
 
 export default function Text({ children, ...props }) {
