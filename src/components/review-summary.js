@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Text from "./text";
 import RatedPeople from "../icons/rated-people.svg";
+import Bark from "../icons/bark.svg";
 import QuoteLeft from "../icons/quote-left.svg";
 import QuoteRight from "../icons/quote-right.svg";
 import Pen from "../icons/pen.svg";
 import Calendar from "../icons/calendar.svg";
 
 const ICONS = {
+  Bark: <Bark />,
   "Rated People": <RatedPeople />
 };
 

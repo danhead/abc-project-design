@@ -57,6 +57,14 @@ module.exports = {
           "Nick and Daniel agreed to level and tile my kitchen floor at very short notice. The quote was very competitively priced and Daniel's workmanship is exceptional. I would definitely recommend them.",
         author: "Daniel",
         date: "21/12/2020"
+      },
+      {
+        name: "Bark",
+        title: "New bathroom",
+        text:
+          "Excellent, my mother's bathroom was gutted and refitted in 7 days. They tiled the necessary areas shower, the floor, a quadrant shower fitted, new sink and toilet fitted. A new ceiling with 4 spot lights and remaining walls plastered and painted. They also fitted a heated towel rail and mirrored cabinet. My mother was delighted and so was I to see her smile at her new bathroom. Worked cleanly and removed all the old bathroom. Very friendly and provided a quick quote. Would highly recommend.",
+        author: "Mrs Wittiker",
+        date: "10/01/2021"
       }
     ]
   },
