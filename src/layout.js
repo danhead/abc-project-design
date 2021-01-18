@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-import Nav from "./components/nav";
-import Footer from "./components/footer";
+import { Footer, Nav } from "./components";
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/cooper-hewitt/400.css";
 import "@fontsource/cooper-hewitt/400-italic.css";
@@ -26,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
     --font-size-lg: 20px;
     --font-size-xl: 24px;
     --font-size-xxl: 32px;
+    --icon-size-md: 16px;
+    --icon-size-lg: 24px;
 
     --spacing-y-xs: 4px;
     --spacing-y-sm: 8px;

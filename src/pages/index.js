@@ -1,13 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import Header from "../components/header";
-import HeaderLogo from "../components/header-logo";
-import Section from "../components/section";
-import Card from "../components/card";
-import ReviewSummary from "../components/review-summary";
-import CustomSlick from "../components/custom-slick";
-import Text from "../components/text";
+import {
+  Card,
+  CustomSlick,
+  Header,
+  HeaderLogo,
+  ReviewSummary,
+  Section,
+  Text
+} from "../components";
 
 export default function Index({ data }) {
   return (

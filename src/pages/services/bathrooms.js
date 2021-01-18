@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../layout";
-import Header from "../../components/header";
+import { Header } from "../../components";
 
 export default function Index({ data }) {
   return (

@@ -1,9 +1,7 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../layout";
-import Header from "../components/header";
-import HeaderLogo from "../components/header-logo";
-import Section from "../components/section";
+import { Header, Link, Section } from "../components";
 
 export default function Index({ data }) {
   return (
