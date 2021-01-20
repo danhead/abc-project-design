@@ -18,11 +18,26 @@ const Input = styled.input`
   border: 1px solid var(--theme-color-dark);
 `;
 
-export default function InputText({ id, label, required, textArea }) {
+export default function InputText({
+  id,
+  name,
+  label,
+  value,
+  onChange,
+  required,
+  textArea
+}) {
   return (
     <Container>
       <Label htmlFor={id}>{label}</Label>
-      <Input type="text" id={id} as={textArea ? "textarea" : "input"} />
+      <Input
+        type="text"
+        id={id}
+        name={name}
+        value={value}
+        onChange={onChange}
+        as={textArea ? "textarea" : "input"}
+      />
     </Container>
   );
 }
