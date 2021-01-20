@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const Link = styled(GatsbyLink)`
   display: inline-block;

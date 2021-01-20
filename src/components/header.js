@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const Container = styled.header`
   position: relative;
@@ -29,7 +29,7 @@ export default function Header({ image, children }) {
 /*
 
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import MenuButton from "./menu-button";
 import Nav from "./nav";
 

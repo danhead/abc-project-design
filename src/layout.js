@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import { Footer, Nav } from "./components";
-import { createGlobalStyle } from "styled-components";
+import { css, Global } from "@emotion/react";
 import "@fontsource/cooper-hewitt/400.css";
 import "@fontsource/cooper-hewitt/400-italic.css";
 import "@fontsource/cooper-hewitt/700.css";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = css`
   :root {
     --theme-max-width: 960px;
     --theme-color-primary: #9c0905;
@@ -66,12 +66,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Cooper Hewitt', sans-serif; 
+    font-family: "Cooper Hewitt", sans-serif;
     overflow-x: hidden;
-    overflow-y: ${props => (props.navOpen ? "hidden" : "auto")};
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 
@@ -108,7 +109,6 @@ export default function Layout({ children }) {
   `);
   const { title, description, keywords, navData } = data.site.siteMetadata;
   const [navOpen, setNavOpen] = useState();
-  const [loaded, setLoaded] = useState();
   return (
     <>
       <main>
@@ -121,17 +121,21 @@ export default function Layout({ children }) {
           htmlAttributes={{
             lang: "en"
           }}
-          onChangeClientState={() => setLoaded(true)}
         />
-        <GlobalStyle navOpen={navOpen} />
-        {loaded && (
-          <>
-            {children}
-            <Footer />
-          </>
-        )}
+        <Global styles={GlobalStyles} />
+        <Global
+          styles={
+            navOpen && {
+              body: {
+                "overflow-y": "hidden"
+              }
+            }
+          }
+        />
+        {children}
+        <Footer />
       </main>
-      {loaded && <Nav data={navData} open={navOpen} setOpen={setNavOpen} />}
+      <Nav data={navData} open={navOpen} setOpen={setNavOpen} />
     </>
   );
 }

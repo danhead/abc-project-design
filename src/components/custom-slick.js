@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Slick from "react-slick";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import LeftArrow from "../icons/left-arrow.svg";
 import RightArrow from "../icons/right-arrow.svg";
 import "slick-carousel/slick/slick.css";

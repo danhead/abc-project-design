@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Text from "./text";
 import RatedPeople from "../icons/rated-people.svg";
 import Bark from "../icons/bark.svg";
