@@ -1,10 +1,12 @@
 const path = require("path");
+const { GMAPS_APIKEY } = process.env;
 
 module.exports = {
   siteMetadata: {
     title: `ABC Project Design`,
     description: `Easy as ABC`,
     keywords: `Foo bar baz`,
+    secrets: { GMAPS_APIKEY },
     navData: [
       {
         title: "Home",

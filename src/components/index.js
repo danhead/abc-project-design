@@ -9,6 +9,7 @@ export { default as Icon } from "./icon";
 export { default as IconWithContent } from "./icon-with-content";
 export { default as InputText } from "./input-text";
 export { default as Link } from "./link";
+export { default as Map } from "./map";
 export { default as MenuButton } from "./menu-button";
 export { default as NavItem } from "./nav-item";
 export { default as NavLink } from "./nav-link";

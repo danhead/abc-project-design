@@ -127,7 +127,7 @@ export default function Layout({ children }) {
           styles={
             navOpen && {
               body: {
-                "overflow-y": "hidden"
+                overflowY: "hidden"
               }
             }
           }

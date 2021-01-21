@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
+import { Marker } from "google-maps-react";
 import Layout from "../layout";
 import {
   Button,
@@ -8,6 +9,7 @@ import {
   IconWithContent,
   InputText,
   Link,
+  Map,
   Section,
   Text
 } from "../components";
@@ -129,6 +131,26 @@ export default function Index({ data }) {
           )}
         </div>
       </Section>
+      <Map
+        initialCenter={{
+          lat: 51.5614,
+          lng: 0.1071
+        }}
+        zoom={10}
+        scrollwheel={false}
+        draggable={false}
+        keyboardShortcuts={false}
+        disableDoubleClickZoom={false}
+        zoomControl={false}
+        mapTypeContol={false}
+        scaleControl={false}
+        streetViewControl={false}
+        panControl={false}
+        rotateControl={false}
+        fullscreenControl={false}
+      >
+        <Marker title={"ABC Project Design Ltd"} />
+      </Map>
     </Layout>
   );
 }
