@@ -7,7 +7,7 @@ const Link = styled(GatsbyLink)`
   padding: 0;
   margin-bottom: var(--spacing-y-sm);
   color: var(--color-white);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   text-decoration: none;
   cursor: pointer;
 
