@@ -52,7 +52,7 @@ const Heading = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  opacity: ${props => (props.visible ? 1 : 0)};
+  opacity: ${props => (props.hidden ? 0 : 1)};
   transform: opacity 0.3s ease-in;
 
   svg {
@@ -60,21 +60,21 @@ const Heading = styled(Link)`
     height: 12px;
 
     &:first-of-type {
-      path:first-child {
+      path:first-of-type {
         fill: var(--theme-color-primary);
       }
 
-      path:last-child {
+      path:last-of-type {
         fill: var(--theme-color-secondary);
       }
     }
     &:last-of-type {
       transform: rotate(180deg);
-      path:first-child {
+      path:first-of-type {
         fill: var(--theme-color-dark);
       }
 
-      path:last-child {
+      path:last-of-type {
         fill: var(--theme-color-secondary);
       }
     }
@@ -110,7 +110,7 @@ export default function Nav({ data, open, setOpen }) {
     <Container open={open}>
       <Wrapper>
         <Menu>
-          <Heading to="/" visible={!open} aria-label="Back home">
+          <Heading to="/" hidden={open} aria-label="Back home">
             <LogoArrows />
             <LogoArrows />
           </Heading>

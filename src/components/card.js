@@ -9,7 +9,7 @@ const Container = styled.div`
   margin: 0 calc(var(--spacing-x-xs) * -1) var(--spacing-y-sm);
 
   @media (max-width: 30em) {
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
   }
@@ -35,7 +35,7 @@ const Link = styled(GatsbyLink)`
   }
 
   @media (max-width: 30em) {
-    &:nth-child(even) ${Container} {
+    &:nth-of-type(even) ${Container} {
       flex-direction: row-reverse;
     }
   }

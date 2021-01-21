@@ -18,11 +18,11 @@ const Top = styled.div`
   transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
     transform 0.5s ease-in 0.5s;
 
-  path:first-child {
+  path:first-of-type {
     fill: var(--theme-color-primary);
   }
 
-  path:last-child {
+  path:last-of-type {
     fill: var(--theme-color-secondary);
   }
 
@@ -55,11 +55,11 @@ const Bottom = styled.div`
   transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
     transform 0.5s ease-in 0.5s;
 
-  path:first-child {
+  path:first-of-type {
     fill: var(--theme-color-dark);
   }
 
-  path:last-child {
+  path:last-of-type {
     fill: var(--theme-color-secondary);
   }
 
