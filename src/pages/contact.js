@@ -50,7 +50,10 @@ export default function Index({ data }) {
   };
   return (
     <Layout>
-      <Header image={data.headerImage.childImageSharp.fluid}>
+      <Header
+        image={data.headerImage.childImageSharp.fluid}
+        position="bottom right"
+      >
         <h1>Get in touch</h1>
       </Header>
       <Section grid={2} breakpoint="40em">

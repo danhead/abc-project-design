@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { Heading } from ".";
 
 const Container = styled.div`
   padding: var(--spacing-y-lg) var(--spacing-x-sm);
@@ -16,7 +17,9 @@ const Container = styled.div`
 const Content = styled.div`
   max-width: var(--theme-max-width);
   margin: 0 auto;
+`;
 
+const Body = styled.div`
   ${props =>
     props.grid > 0 &&
     css`
@@ -29,6 +32,8 @@ const Content = styled.div`
 `;
 
 export default function Section({
+  heading,
+  headingElement = "h2",
   children,
   variant,
   grid,
@@ -36,8 +41,11 @@ export default function Section({
 }) {
   return (
     <Container variant={variant}>
-      <Content grid={grid} breakpoint={breakpoint}>
-        {children}
+      <Content>
+        {heading && <Heading el={headingElement}>{heading}</Heading>}
+        <Body grid={grid} breakpoint={breakpoint}>
+          {children}
+        </Body>
       </Content>
     </Container>
   );

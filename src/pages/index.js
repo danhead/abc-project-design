@@ -17,18 +17,7 @@ export default function Index({ data }) {
       <Header image={data.headerImage.childImageSharp.fluid}>
         <HeaderLogo transition={true} />
       </Header>
-      <Section>
-        <Text>
-          ABC Project Design Ltd is a medium sized family run business with more
-          than 30 years experience in the building and construction industry. We
-          offer a fully certified and accredited bathroom refurbishment service.
-        </Text>
-        <Text>
-          We currently have 15 skilled tradesman within our workforce and
-          operate in Essex, Hertfordshire, Kent and London.
-        </Text>
-      </Section>
-      <Section grid={2}>
+      <Section grid={2} heading="What we do">
         <Card
           to="/services/bathrooms"
           image={data.bathroomImage.childImageSharp.fixed}

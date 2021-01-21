@@ -5,6 +5,7 @@ export { default as CustomSlick } from "./custom-slick";
 export { default as Footer } from "./footer";
 export { default as HeaderLogo } from "./header-logo";
 export { default as Header } from "./header";
+export { default as Heading } from "./heading";
 export { default as Icon } from "./icon";
 export { default as IconWithContent } from "./icon-with-content";
 export { default as InputText } from "./input-text";

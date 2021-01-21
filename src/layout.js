@@ -21,10 +21,11 @@ const GlobalStyles = css`
     --color-dark-grey: #333;
     --color-semi-transparent: rgba(255, 255, 255, 0.75);
     --base-font-size: 16px;
-    --font-size-sm: 14px;
-    --font-size-lg: 20px;
-    --font-size-xl: 24px;
-    --font-size-xxl: 32px;
+    --font-size-sm: 0.875rem; // 14px
+    --font-size-md: 1rem; // 16px
+    --font-size-lg: 1.125rem; // 18px
+    --font-size-xl: 1.375rem; // 22px
+    --font-size-xxl: 1.625rem; // 26px
     --icon-size-md: 16px;
     --icon-size-lg: 24px;
 
@@ -52,10 +53,6 @@ const GlobalStyles = css`
       --spacing-x-xl: 48px;
 
       --base-font-size: 18px;
-      --font-size-sm: 16px;
-      --font-size-lg: 24px;
-      --font-size-xl: 32px;
-      --font-size-xxl: 42px;
     }
   }
 

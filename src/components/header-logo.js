@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { Heading, Text } from ".";
 import LogoArrows from "../icons/logo-arrows.svg";
 
 const Container = styled.div`
@@ -72,17 +73,6 @@ const Bottom = styled.div`
     `}
 `;
 
-const Heading = styled.h1`
-  margin: 0 var(--spacing-x-xs) var(--spacing-y-xs);
-  font-size: var(--font-size-xl);
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-`;
-
-const Slogan = styled.p`
-  margin: 0 var(--spacing-x-xs) var(--spacing-y-xs);
-  font-size: var(--font-size-lg);
-`;
-
 export default function HeaderLogo({ transition }) {
   const [visible, setVisible] = useState(!transition);
   useEffect(() => transition && setVisible(true), [transition]);
@@ -92,8 +82,10 @@ export default function HeaderLogo({ transition }) {
         <LogoArrows />
       </Top>
       <Middle visible={visible}>
-        <Heading>Abc Project Design Ltd</Heading>
-        <Slogan>Easy as ABC</Slogan>
+        <Heading withShadow noMargin>
+          Abc Project Design Ltd
+        </Heading>
+        <Text size="lg">Easy as ABC</Text>
       </Middle>
       <Bottom visible={visible}>
         <LogoArrows />
