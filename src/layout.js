@@ -83,7 +83,7 @@ const GlobalStyles = css`
   }
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ location, children }) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -131,7 +131,12 @@ export default function Layout({ children }) {
         {children}
         <Footer />
       </main>
-      <Nav data={navData} open={navOpen} setOpen={setNavOpen} />
+      <Nav
+        location={location}
+        data={navData}
+        open={navOpen}
+        setOpen={setNavOpen}
+      />
     </>
   );
 }

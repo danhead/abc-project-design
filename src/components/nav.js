@@ -104,7 +104,7 @@ const List = styled.ul`
   }
 `;
 
-export default function Nav({ data, open, setOpen }) {
+export default function Nav({ location, data, open, setOpen }) {
   const handleButtonClick = () => setOpen(!open);
   return (
     <Container open={open}>
@@ -124,6 +124,11 @@ export default function Nav({ data, open, setOpen }) {
                 index={i}
                 subNav={link.subNav}
                 to={link.to}
+                location={location}
+                active={location === link.to}
+                partiallyActive={
+                  link.subNav && location && location.indexOf(link.to) === 0
+                }
                 open={open}
               >
                 {link.title}

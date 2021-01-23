@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 import NavLink from "./nav-link";
 
 const SubList = styled.ul`
@@ -36,16 +35,28 @@ const ListItem = styled.li`
   }
 `;
 
-export default function NavItem({ children, subNav, index, open, ...other }) {
+export default function NavItem({
+  children,
+  subNav,
+  index,
+  open,
+  location,
+  to,
+  ...other
+}) {
   const hasChildren = subNav && subNav.length > 0;
   return (
     <ListItem open={open} index={index}>
-      <NavLink {...other}>{children}</NavLink>
+      <NavLink to={to} {...other}>
+        {children}
+      </NavLink>
       {hasChildren && (
         <SubList>
           {subNav.map((link, i) => (
             <ListItem key={i} index={i} open={open}>
-              <NavLink to={link.to}>{link.title}</NavLink>
+              <NavLink location={location} to={link.to}>
+                {link.title}
+              </NavLink>
             </ListItem>
           ))}
         </SubList>

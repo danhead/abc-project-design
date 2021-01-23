@@ -49,7 +49,7 @@ export default function Index({ data }) {
       .catch(error => console.log(error));
   };
   return (
-    <Layout>
+    <Layout location="/contact">
       <Header
         image={data.headerImage.childImageSharp.fluid}
         position="bottom right"

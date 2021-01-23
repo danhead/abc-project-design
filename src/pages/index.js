@@ -14,7 +14,7 @@ import {
 
 export default function Index({ data }) {
   return (
-    <Layout>
+    <Layout location="/">
       <Header image={data.headerImage.childImageSharp.fluid}>
         <HeaderLogo transition={true} />
       </Header>

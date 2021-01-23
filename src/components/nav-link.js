@@ -20,10 +20,13 @@ const Link = styled(GatsbyLink)`
     margin: 0 var(--spacing-x-xs);
     padding: 9px 0;
     border-bottom: 2px solid
-      ${props => (props.active ? `var(--color-white)` : `transparent`)};
+      ${props =>
+        props.active || props.partiallyActive
+          ? `var(--color-white)`
+          : `transparent`};
   }
 `;
 
-export default function NavLink({ children, to }) {
-  return <Link to={to}>{children}</Link>;
+export default function NavLink({ children, ...other }) {
+  return <Link {...other}>{children}</Link>;
 }

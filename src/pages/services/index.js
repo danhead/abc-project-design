@@ -5,7 +5,7 @@ import { Header } from "../../components";
 
 export default function Index({ data }) {
   return (
-    <Layout>
+    <Layout location="/services">
       <Header image={data.headerImage.childImageSharp.fluid}>
         <h1>Services</h1>
       </Header>

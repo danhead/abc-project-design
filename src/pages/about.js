@@ -5,7 +5,7 @@ import { Header, Heading, Section, Text } from "../components";
 
 export default function Index({ data }) {
   return (
-    <Layout>
+    <Layout location="/about">
       <Header
         image={data.headerImage.childImageSharp.fluid}
         position="bottom right"
