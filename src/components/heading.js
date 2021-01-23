@@ -6,7 +6,12 @@ const Styles = styled.h1`
   margin: ${props => (props.noMargin ? 0 : `0 0 var(--spacing-y-sm)`)};
   font-size: ${props => `var(--font-size-${props.size})`};
   ${props =>
-    props.shadow &&
+    props.noWrap &&
+    css`
+      white-space: nowrap;
+    `}
+  ${props =>
+    props.withShadow &&
     css`
       text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     `};
@@ -21,10 +26,10 @@ const sizes = {
   h6: "lg"
 };
 
-export default function Heading({ el = "h1", withShadow, noMargin, children }) {
+export default function Heading({ el = "h1", children, ...other }) {
   const Container = Styles.withComponent(el);
   return (
-    <Container size={sizes[el]} shadow={withShadow} noMargin={noMargin}>
+    <Container size={sizes[el]} {...other}>
       {children}
     </Container>
   );

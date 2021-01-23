@@ -37,7 +37,6 @@ const Top = styled.div`
 `;
 
 const Middle = styled.div`
-  width: 100vw;
   opacity: 0;
   transition: opacity 0.5s ease-in 0.75s;
   ${props =>
@@ -82,7 +81,7 @@ export default function HeaderLogo({ transition }) {
         <LogoArrows />
       </Top>
       <Middle visible={visible}>
-        <Heading withShadow noMargin>
+        <Heading withShadow noMargin noWrap>
           Abc Project Design Ltd
         </Heading>
         <Text size="lg">Easy as ABC</Text>

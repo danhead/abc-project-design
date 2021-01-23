@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 const Container = styled.header`
   position: relative;
-  height: 60vh;
+  height: 50vh;
   max-height: 1200px;
   color: white;
 `;
@@ -36,7 +36,6 @@ const Content = styled.div`
     ${props => (props.posY === "middle" ? "-50%" : 0)}
   );
   max-width: var(--theme-max-width);
-  margin: var(--spacing-y-sm) var(--spacing-x-sm);
   padding: var(--spacing-y-sm) var(--spacing-x-sm);
   text-align: center;
 `;

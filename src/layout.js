@@ -64,7 +64,6 @@ const GlobalStyles = css`
     box-sizing: border-box;
     margin: 0;
     font-family: "Cooper Hewitt", sans-serif;
-    overflow-x: hidden;
   }
 
   *,
