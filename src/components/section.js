@@ -19,14 +19,20 @@ const Content = styled.div`
   margin: 0 auto;
 `;
 
+const Head = styled.div`
+  text-align: center;
+`;
+
 const Body = styled.div`
   ${props =>
     props.grid > 0 &&
     css`
+      display: grid;
+      gap: var(--spacing-x-sm) 0;
+
       @media (min-width: ${props.breakpoint}) {
-        display: grid;
         grid-template-columns: repeat(${props.grid}, 1fr);
-        gap: var(--spacing-x-xs);
+        gap: var(--spacing-x-md);
       }
     `}
 `;
@@ -42,7 +48,11 @@ export default function Section({
   return (
     <Container variant={variant}>
       <Content>
-        {heading && <Heading el={headingElement}>{heading}</Heading>}
+        {heading && (
+          <Head>
+            <Heading el={headingElement}>{heading}</Heading>
+          </Head>
+        )}
         <Body grid={grid} breakpoint={breakpoint}>
           {children}
         </Body>
