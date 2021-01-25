@@ -35,9 +35,14 @@ module.exports = {
         ]
       },
       {
+        title: "Area covered",
+        to: "/area-covered"
+      },
+      {
         title: "About",
         to: "/about"
       },
+
       {
         title: "Contact",
         to: "/contact"

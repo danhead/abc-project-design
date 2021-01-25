@@ -5,8 +5,8 @@ import { css } from "@emotion/react";
 const Container = styled.header`
   position: relative;
   height: 50vh;
-  max-height: 1200px;
   color: white;
+  ${props => props.avoidNav && `margin-top: 40px;`}
 `;
 
 const Content = styled.div`
@@ -40,15 +40,20 @@ const Content = styled.div`
   text-align: center;
 `;
 
+const Map = styled.div``;
+
 export default function Header({
   image,
+  map,
   position = "middle middle",
+  avoidNav,
   children
 }) {
   const [posY, posX] = position.split(" ");
   return (
-    <Container>
+    <Container avoidNav={avoidNav}>
       {image && <Img style={{ height: "100%" }} fluid={image} />}
+      {map && <Map>{map}</Map>}
       <Content posX={posX} posY={posY}>
         {children}
       </Content>
