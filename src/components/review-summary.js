@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Text from "./text";
+import { Text } from ".";
 import RatedPeople from "../icons/rated-people.svg";
 import Bark from "../icons/bark.svg";
 import QuoteLeft from "../icons/quote-left.svg";

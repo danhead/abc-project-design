@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
-import NavItem from "./nav-item";
-import MenuButton from "./menu-button";
+import { MenuButton, NavItem } from ".";
 import LogoArrows from "../icons/logo-arrows.svg";
 
 const Container = styled.div`
