@@ -9,6 +9,7 @@ const Container = styled.div`
 `;
 
 const IconWrapper = styled.div`
+  display: flex;
   margin-right: var(--spacing-x-sm);
 `;
 
