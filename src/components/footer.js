@@ -27,9 +27,9 @@ export default function Footer() {
             <Icon color="dark" size="lg">
               <Phone />
             </Icon>
-            <Text color="dark" size="lg">
+            <Link color="dark" size="lg" to="tel:+447123456789">
               07123 456789
-            </Text>
+            </Link>
           </IconWithContent>
           <IconWithContent>
             <Icon color="dark" size="lg">
