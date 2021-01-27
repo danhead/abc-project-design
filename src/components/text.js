@@ -3,11 +3,16 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const StyledText = styled.p`
-  margin-bottom: var(--spacing-y-xs);
+  margin: ${props => (props.noMargin ? 0 : `0 0 var(--spacing-y-md)`)};
   ${props =>
     props.textStyle &&
     css`
       font-style: ${props.textStyle};
+    `}
+  ${props =>
+    props.align &&
+    css`
+      text-align: ${props.align};
     `}
   font-size: ${props => `var(--font-size-${props.size})`};
   color: ${props => `var(--theme-color-${props.color})`};

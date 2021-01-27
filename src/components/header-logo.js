@@ -84,7 +84,9 @@ export default function HeaderLogo({ transition }) {
         <Heading withShadow noMargin noWrap>
           Abc Project Design Ltd
         </Heading>
-        <Text size="lg">Easy as ABC</Text>
+        <Text size="lg" noMargin>
+          Easy as ABC
+        </Text>
       </Middle>
       <Bottom visible={visible}>
         <LogoArrows />
