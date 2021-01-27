@@ -3,6 +3,7 @@ export { default as Card } from "./card";
 export { default as Content } from "./content";
 export { default as CustomSlick } from "./custom-slick";
 export { default as Footer } from "./footer";
+export { default as Grid } from "./grid";
 export { default as HeaderLogo } from "./header-logo";
 export { default as Header } from "./header";
 export { default as Heading } from "./heading";

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 import { Heading } from ".";
 
 const Container = styled.div`
@@ -23,27 +22,11 @@ const Head = styled.div`
   text-align: center;
 `;
 
-const Body = styled.div`
-  ${props =>
-    props.grid > 0 &&
-    css`
-      display: grid;
-      gap: var(--spacing-x-sm) 0;
-
-      @media (min-width: ${props.breakpoint}) {
-        grid-template-columns: repeat(${props.grid}, 1fr);
-        gap: var(--spacing-x-md);
-      }
-    `}
-`;
-
 export default function Section({
   heading,
   headingElement = "h2",
   children,
-  variant,
-  grid,
-  breakpoint = "30em"
+  variant
 }) {
   return (
     <Container variant={variant}>
@@ -53,9 +36,7 @@ export default function Section({
             <Heading el={headingElement}>{heading}</Heading>
           </Head>
         )}
-        <Body grid={grid} breakpoint={breakpoint}>
-          {children}
-        </Body>
+        {children}
       </Content>
     </Container>
   );
