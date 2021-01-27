@@ -19,3 +19,4 @@ export { default as Nav } from "./nav";
 export { default as ReviewSummary } from "./review-summary";
 export { default as Section } from "./section";
 export { default as Text } from "./text";
+export { default as Tile } from "./tile";
