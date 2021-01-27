@@ -53,7 +53,7 @@ export default function Index({ data }) {
     <Layout location="/contact">
       <Header
         image={data.headerImage.childImageSharp.fluid}
-        position="bottom right"
+        position="middle right"
       >
         <h1>Get in touch</h1>
       </Header>
@@ -163,7 +163,7 @@ export default function Index({ data }) {
 
 export const query = graphql`
   query {
-    headerImage: file(relativePath: { eq: "bathroom.png" }) {
+    headerImage: file(relativePath: { eq: "bathroom4.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
