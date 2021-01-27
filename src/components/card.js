@@ -29,12 +29,15 @@ const Content = styled.div`
 const Container = styled.div`
   position: relative;
   overflow: hidden;
-  &:hover ${Content} {
-    background-color: rgba(0, 0, 0, 0.65);
-    transform: translate3d(0, 0, 0);
-  }
-  &:hover ${Media} {
-    transform: scale(1.05);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover ${Content} {
+      background-color: rgba(0, 0, 0, 0.65);
+      transform: translate3d(0, 0, 0);
+    }
+    &:hover ${Media} {
+      transform: scale(1.05);
+    }
   }
 `;
 
