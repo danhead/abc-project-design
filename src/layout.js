@@ -18,9 +18,11 @@ const GlobalStyles = css`
     --color-black: #000;
     --color-white: #fff;
     --color-light-grey: #ced;
+    --color-mid-grey: #606069;
     --color-dark-grey: #333;
     --color-semi-transparent: rgba(255, 255, 255, 0.75);
     --base-font-size: 16px;
+    --line-height: 1.6;
     --font-size-sm: 0.875rem; // 14px
     --font-size-md: 1rem; // 16px
     --font-size-lg: 1.125rem; // 18px
@@ -64,6 +66,7 @@ const GlobalStyles = css`
     box-sizing: border-box;
     margin: 0;
     font-family: "Cooper Hewitt", sans-serif;
+    line-height: var(--line-height);
   }
 
   *,
