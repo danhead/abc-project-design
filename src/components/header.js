@@ -35,7 +35,7 @@ const Content = styled.div`
     ${props => (props.posX === "middle" ? "-50%" : 0)},
     ${props => (props.posY === "middle" ? "-50%" : 0)}
   );
-  max-width: var(--theme-max-width);
+  max-width: var(--page-max-width);
   padding: var(--spacing-y-sm) var(--spacing-x-sm);
   text-align: center;
 `;

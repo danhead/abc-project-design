@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const Container = styled.span`
   display: inline-block;
   width: ${props => `var(--icon-size-${props.size})`};
   height: ${props => `var(--icon-size-${props.size})`};
-  color: ${props => `var(--theme-color-${props.color})`};
+  ${props =>
+    props.color &&
+    css`
+      color: var(--color-${props.color});
+    `}
 
   svg {
     width: 100%;

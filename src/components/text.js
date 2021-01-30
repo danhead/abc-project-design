@@ -14,10 +14,22 @@ const StyledText = styled.p`
     css`
       text-align: ${props.align};
     `}
-  font-size: ${props => `var(--font-size-${props.size})`};
-  color: ${props => `var(--theme-color-${props.color})`};
+  ${props =>
+    props.size &&
+    css`
+      font-size: var(--font-size-${props.size});
+    `}
+  ${props =>
+    props.color &&
+    css`
+      color: var(--color-${props.color});
+    `}
 `;
 
 export default function Text({ children, ...props }) {
-  return <StyledText {...props}>{children}</StyledText>;
+  return (
+    <StyledText {...props}>
+      {children}
+    </StyledText>
+  );
 }

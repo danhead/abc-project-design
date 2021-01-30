@@ -49,7 +49,7 @@ const Quote = styled.div`
     position: absolute;
     width: 24px;
     height: 24px;
-    color: var(--theme-color-dark);
+    color: var(--color-dark);
 
     &:first-of-type {
       top: 0;
@@ -67,7 +67,7 @@ const Quote = styled.div`
 
 const Title = styled.p`
   font-weight: bold;
-  color: var(--theme-color-dark);
+  color: var(--color-dark);
 `;
 
 const SmallIcon = styled.span`
@@ -75,7 +75,7 @@ const SmallIcon = styled.span`
   width: 16px;
   height: 16px;
   margin-right: var(--spacing-x-sm);
-  color: var(--theme-color-dark);
+  color: var(--color-dark);
 
   svg {
     width: 100%;

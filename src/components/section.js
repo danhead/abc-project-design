@@ -6,15 +6,14 @@ const Container = styled.div`
   padding: var(--spacing-y-lg) var(--spacing-x-sm);
   ${props => !props.variant && `background-color: var(--color-white);`}
   ${props =>
-    props.variant === "primary" &&
-    `background-color: var(--theme-color-light);`}
+    props.variant === "primary" && `background-color: var(--color-light);`}
   ${props =>
     props.variant === "transparent" &&
     `background-color: var(--color-semi-transparent);`}
 `;
 
 const Content = styled.div`
-  max-width: var(--theme-max-width);
+  max-width: var(--page-max-width);
   margin: 0 auto;
 `;
 

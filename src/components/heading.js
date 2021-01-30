@@ -5,16 +5,18 @@ import { css } from "@emotion/react";
 const Styles = styled.h1`
   margin: ${props => (props.noMargin ? 0 : `0 0 var(--spacing-y-sm)`)};
   font-size: ${props => `var(--font-size-${props.size})`};
+  text-shadow: 0 0 ${props => props.shadowRadius || `2px`}
+    ${props => props.shadowColor || `rgba(0, 0, 0, 0.25)`};
+  ${props =>
+    props.color &&
+    css`
+      color: var(--color-${props.color});
+    `}
   ${props =>
     props.noWrap &&
     css`
       white-space: nowrap;
     `}
-  ${props =>
-    props.withShadow &&
-    css`
-      text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    `};
 `;
 
 const sizes = {

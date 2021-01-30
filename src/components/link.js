@@ -1,10 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { Link as GatsbyLink } from "gatsby";
 
 const StyledLink = styled.a`
-  font-size: ${props => `var(--font-size-${props.size})`};
-  color: ${props => `var(--theme-color-${props.color})`};
+  ${props =>
+    props.size &&
+    css`
+      font-size: var(--font-size-${props.size});
+    `}
+  ${props =>
+    props.color &&
+    css`
+      color: var(--theme-color-${props.color});
+    `}
   text-decoration: none;
 `;
 

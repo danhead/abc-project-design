@@ -9,20 +9,21 @@ import "@fontsource/cooper-hewitt/700.css";
 
 const GlobalStyles = css`
   :root {
-    --theme-max-width: 960px;
-    --theme-color-primary: #9c0905;
-    --theme-color-secondary: #9590a8;
-    --theme-color-tertiary: #bbcbcb;
-    --theme-color-light: #e5ffde;
-    --theme-color-dark: #000a61;
+    --page-max-width: 960px;
+    --color-primary: #9c0905;
+    --color-secondary: #9590a8;
+    --color-tertiary: #bbcbcb;
+    --color-light: #e5ffde;
+    --color-dark: #000a61;
     --color-black: #000;
     --color-white: #fff;
     --color-light-grey: #ced;
     --color-mid-grey: #606069;
-    --color-dark-grey: #333;
+    --color-dark-grey: #233;
     --color-semi-transparent: rgba(255, 255, 255, 0.75);
     --base-font-size: 16px;
     --line-height: 1.6;
+    --font-size-xs: 0.75rem; // 12px
     --font-size-sm: 0.875rem; // 14px
     --font-size-md: 1rem; // 16px
     --font-size-lg: 1.125rem; // 18px
@@ -67,6 +68,7 @@ const GlobalStyles = css`
     margin: 0;
     font-family: "Cooper Hewitt", sans-serif;
     line-height: var(--line-height);
+    color: var(--color-dark-grey);
   }
 
   *,

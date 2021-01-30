@@ -16,7 +16,7 @@ const Button = styled.button`
     `}
   z-index: 2;
   background-color: transparent;
-  color: var(--theme-color-dark);
+  color: var(--color-dark);
   border: none;
   margin: 0;
   padding: 0;

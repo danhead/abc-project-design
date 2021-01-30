@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   height: 100%;
-  max-width: var(--theme-max-width);
+  max-width: var(--page-max-width);
   margin: 0 auto;
   @media (min-width: 30em) {
     flex-direction: row;
@@ -60,21 +60,21 @@ const Heading = styled(Link)`
 
     &:first-of-type {
       path:first-of-type {
-        fill: var(--theme-color-primary);
+        fill: var(--color-primary);
       }
 
       path:last-of-type {
-        fill: var(--theme-color-secondary);
+        fill: var(--color-secondary);
       }
     }
     &:last-of-type {
       transform: rotate(180deg);
       path:first-of-type {
-        fill: var(--theme-color-dark);
+        fill: var(--color-dark);
       }
 
       path:last-of-type {
-        fill: var(--theme-color-secondary);
+        fill: var(--color-secondary);
       }
     }
   }

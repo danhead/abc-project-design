@@ -20,11 +20,11 @@ const Top = styled.div`
     transform 0.5s ease-in 0.5s;
 
   path:first-of-type {
-    fill: var(--theme-color-primary);
+    fill: var(--color-primary);
   }
 
   path:last-of-type {
-    fill: var(--theme-color-secondary);
+    fill: var(--color-secondary);
   }
 
   ${props =>
@@ -56,11 +56,11 @@ const Bottom = styled.div`
     transform 0.5s ease-in 0.5s;
 
   path:first-of-type {
-    fill: var(--theme-color-dark);
+    fill: var(--color-dark);
   }
 
   path:last-of-type {
-    fill: var(--theme-color-secondary);
+    fill: var(--color-secondary);
   }
 
   ${props =>
@@ -81,8 +81,13 @@ export default function HeaderLogo({ transition }) {
         <LogoArrows />
       </Top>
       <Middle visible={visible}>
-        <Heading withShadow noMargin noWrap>
-          Abc Project Design Ltd
+        <Heading
+          shadowRadius="15px"
+          shadowColor="rgba(255, 255, 255, 0.25)"
+          noMargin
+          noWrap
+        >
+          ABC Project Design Ltd
         </Heading>
         <Text size="lg" noMargin>
           Easy as ABC

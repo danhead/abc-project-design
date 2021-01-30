@@ -15,7 +15,7 @@ const Input = styled.input`
   width: 100%;
   margin-bottom: var(--spacing-y-sm);
   padding: var(--spacing-y-xs) var(--spacing-x-sm);
-  border: 1px solid var(--theme-color-dark);
+  border: 1px solid var(--color-dark);
 `;
 
 export default function InputText({

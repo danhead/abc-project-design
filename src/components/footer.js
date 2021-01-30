@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { Grid, IconWithContent, Icon, Link } from ".";
+import { Grid, IconWithContent, Icon, Link, Text } from ".";
 import Envelope from "../icons/envelope.svg";
 import Phone from "../icons/phone.svg";
 
@@ -11,7 +11,7 @@ const Container = styled.footer`
 `;
 
 const Content = styled.div`
-  max-width: var(--theme-max-width);
+  max-width: var(--page-max-width);
   margin: 0 auto;
   padding: var(--spacing-y-lg) var(--spacing-x-sm);
   font-size: var(--font-size-sm);
@@ -60,7 +60,7 @@ export default function Footer() {
             </IconWithContent>
           </Cell>
         </Grid>
-        <div>&copy; {year} Abc Project Ltd</div>
+        <Text size="xs">&copy; {year} Abc Project Ltd</Text>
       </Content>
     </Container>
   );
