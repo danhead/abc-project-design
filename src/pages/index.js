@@ -1,5 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import styled from "@emotion/styled";
 import Layout from "../layout";
 import {
   Card,
@@ -8,17 +10,33 @@ import {
   Header,
   HeaderLogo,
   Heading,
+  Link,
   ReviewSummary,
   Section,
   Text,
   Tile
 } from "../components";
 import Calendar from "../icons/calendar.svg";
+import Checkatrade from "../icons/checkatrade.svg";
 import CheckCircle from "../icons/check-circle.svg";
 import Hammer from "../icons/hammer.svg";
 import Pound from "../icons/pound.svg";
+import RatedPeople from "../icons/rated-people-full.svg";
 import Smile from "../icons/smile.svg";
 import Spy from "../icons/spy.svg";
+
+const LogoItem = styled.div`
+  text-align: center;
+`;
+
+const Logo = styled.span`
+  display: block;
+  height: 32px;
+
+  svg {
+    height: 100%;
+  }
+`;
 
 export default function Index({ data }) {
   return (
@@ -114,6 +132,32 @@ export default function Index({ data }) {
             <ReviewSummary key={i} review={review} />
           ))}
         </CustomSlick>
+        <Heading el="h3" align="center">
+          See all of our reviews
+        </Heading>
+        <Grid columns={[1, 3]} breakpoints={["45em"]}>
+          <LogoItem>
+            <Link to="https://www.bark.com/en/gb/company/abc-project-design-ltd/alJKp">
+              <Logo>
+                <Img fixed={data.barkImage.childImageSharp.fixed} />
+              </Logo>
+            </Link>
+          </LogoItem>
+          <LogoItem>
+            <Link to="https://www.checkatrade.com/trades/AbcProject/reviews">
+              <Logo>
+                <Checkatrade />
+              </Logo>
+            </Link>
+          </LogoItem>
+          <LogoItem>
+            <Link to="https://www.ratedpeople.com/profile/ciprian-jitariuc#ratings">
+              <Logo>
+                <RatedPeople />
+              </Logo>
+            </Link>
+          </LogoItem>
+        </Grid>
       </Section>
     </Layout>
   );
@@ -153,6 +197,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 480, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    barkImage: file(relativePath: { eq: "bark_logo.png" }) {
+      childImageSharp {
+        fixed(width: 106, height: 32, quality: 100) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }

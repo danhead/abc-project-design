@@ -16,6 +16,11 @@ const Styles = styled.h1`
     css`
       white-space: nowrap;
     `}
+  ${props =>
+    props.align &&
+    css`
+      text-align: ${props.align};
+    `}
 `;
 
 const sizes = {
