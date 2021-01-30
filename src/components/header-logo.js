@@ -81,12 +81,7 @@ export default function HeaderLogo({ transition }) {
         <LogoArrows />
       </Top>
       <Middle visible={visible}>
-        <Heading
-          shadowRadius="15px"
-          shadowColor="rgba(255, 255, 255, 0.25)"
-          noMargin
-          noWrap
-        >
+        <Heading shadow="xl-white" noMargin noWrap>
           ABC Project Design Ltd
         </Heading>
         <Text size="lg" noMargin>

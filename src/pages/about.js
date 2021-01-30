@@ -10,8 +10,8 @@ export default function Index({ data }) {
         image={data.headerImage.childImageSharp.fluid}
         position="bottom right"
       >
-        <Heading>
-          Slogan <em>or quote here</em>
+        <Heading shadow="xl-white">
+          <em>Easy as</em> ABC
         </Heading>
       </Header>
       <Section heading="About ABC Project Design">
