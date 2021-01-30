@@ -13,7 +13,7 @@ const GlobalStyles = css`
     --color-primary: #9c0905;
     --color-secondary: #9590a8;
     --color-tertiary: #bbcbcb;
-    --color-light: #e5ffde;
+    --color-light: #eeedf1;
     --color-dark: #000a61;
     --color-black: #000;
     --color-white: #fff;
