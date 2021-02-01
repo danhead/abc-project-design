@@ -6,6 +6,7 @@ import {
   Button,
   Grid,
   Header,
+  Heading,
   Icon,
   IconWithContent,
   InputText,
@@ -14,9 +15,10 @@ import {
   Section,
   Text
 } from "../components";
-import Phone from "../icons/phone.svg";
-import Envelope from "../icons/envelope.svg";
 import CheckCircle from "../icons/check-circle.svg";
+import Envelope from "../icons/envelope.svg";
+import Phone from "../icons/phone.svg";
+import Team from "../icons/team.svg";
 
 const encodeData = data =>
   Object.keys(data)
@@ -53,15 +55,45 @@ export default function Index({ data }) {
     <Layout location="/contact">
       <Header
         image={data.headerImage.childImageSharp.fluid}
-        position="middle right"
+        position="bottom right"
       >
-        <h1>Get in touch</h1>
+        <Heading shadow="xl-white">
+          <em>Get in</em> touch
+        </Heading>
       </Header>
       <Section>
         <Grid columns={[1, 2]} breakpoints={["40rem"]}>
           <div>
-            <Text>Get in touch with us</Text>
-            <Text textStyle="italic">More info here</Text>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Team />
+              </Icon>
+              <Text color="dark" size="lg">
+                The team
+              </Text>
+            </IconWithContent>
+            <ul>
+              <li>
+                <Text>
+                  Nicholas Day - <em>Sales and Marketing Manager</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  Daniel Costea - <em>Project Director</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  Maria Antonia - <em>After Sales Manager</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  Harry Jackson - <em>Design and Consultation Manager</em>
+                </Text>
+              </li>
+            </ul>
             <IconWithContent>
               <Icon color="dark" size="lg">
                 <Phone />
@@ -93,7 +125,7 @@ export default function Index({ data }) {
                   <Text color="dark" size="lg">
                     Thank you for contacting us
                   </Text>
-                  <Text color="dark" size="md">
+                  <Text color="dark" size="lg">
                     We will be in touch shortly
                   </Text>
                 </>
@@ -163,9 +195,9 @@ export default function Index({ data }) {
 
 export const query = graphql`
   query {
-    headerImage: file(relativePath: { eq: "bathroom4.png" }) {
+    headerImage: file(relativePath: { eq: "banner_bathroom.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1920, quality: 100) {
+        fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

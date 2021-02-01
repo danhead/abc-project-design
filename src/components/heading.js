@@ -55,7 +55,8 @@ export default function Heading({
   return (
     <Container
       size={sizes[el]}
-      shadowSize={shadowSizes[size]}
+      el={el}
+      shadowSize={el === "h1" ? shadowSizes[size] : 0}
       shadowColor={shadowColors[color]}
       {...other}
     >

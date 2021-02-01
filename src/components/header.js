@@ -5,7 +5,8 @@ import { css } from "@emotion/react";
 const Container = styled.header`
   position: relative;
   height: 50vh;
-  color: white;
+  min-height: 280px;
+  color: var(--color-white);
   ${props => props.avoidNav && `margin-top: 40px;`}
 `;
 
@@ -47,6 +48,8 @@ export default function Header({
   map,
   position = "middle middle",
   avoidNav,
+  variant,
+  swap,
   children
 }) {
   const [posY, posX] = position.split(" ");

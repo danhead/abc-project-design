@@ -23,14 +23,6 @@ module.exports = {
           {
             title: "Tiling",
             to: "/services/tiling"
-          },
-          {
-            title: "Electrics",
-            to: "/services/electrics"
-          },
-          {
-            title: "Carpentry",
-            to: "/services/carpentry"
           }
         ]
       },

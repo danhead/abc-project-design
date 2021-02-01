@@ -1,6 +1,7 @@
 export { default as Button } from "./button";
 export { default as Card } from "./card";
 export { default as Content } from "./content";
+export { default as CustomGallery } from "./custom-gallery";
 export { default as CustomSlick } from "./custom-slick";
 export { default as Footer } from "./footer";
 export { default as Grid } from "./grid";
@@ -18,5 +19,6 @@ export { default as NavLink } from "./nav-link";
 export { default as Nav } from "./nav";
 export { default as ReviewSummary } from "./review-summary";
 export { default as Section } from "./section";
+export { default as Table } from "./table";
 export { default as Text } from "./text";
 export { default as Tile } from "./tile";

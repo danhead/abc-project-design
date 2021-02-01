@@ -50,9 +50,9 @@ export default function Index({ data }) {
 
 export const query = graphql`
   query {
-    headerImage: file(relativePath: { eq: "bathroom3.png" }) {
+    headerImage: file(relativePath: { eq: "banner_bathroom.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1920, quality: 100) {
+        fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

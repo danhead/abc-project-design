@@ -6,6 +6,7 @@ import { css, Global } from "@emotion/react";
 import "@fontsource/cooper-hewitt/400.css";
 import "@fontsource/cooper-hewitt/400-italic.css";
 import "@fontsource/cooper-hewitt/700.css";
+import "@browniebroke/gatsby-image-gallery/dist/style.css";
 
 const GlobalStyles = css`
   :root {
