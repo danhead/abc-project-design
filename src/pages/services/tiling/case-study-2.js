@@ -19,8 +19,8 @@ export default function Index({ data }) {
       </Header>
       <Section>
         <Text>
-          The client needed 19m<sup>2</sup> of ceramic floor tiles at short
-          notice.
+          The client needed 19m<sup>2</sup> of ceramic floor tiles fitted at
+          short notice.
         </Text>
         <Text>
           We first applied self leveling compound as the concrete floor was
