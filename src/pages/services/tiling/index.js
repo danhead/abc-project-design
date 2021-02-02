@@ -27,7 +27,7 @@ export default function Index({ data }) {
         </Text>
       </Section>
       <Section heading="Case studies" variant="primary">
-        <Grid columns={[1, 2]} breakpoints={["30em"]}>
+        <Grid columns={[1, 2, 3]} breakpoints={["30em", "45em"]}>
           <Card
             to="/services/tiling/case-study-1"
             image={data.images.nodes[0].childImageSharp.fluid}
@@ -41,6 +41,27 @@ export default function Index({ data }) {
             heading={<Heading el="h3">Ceramic Floor Tiles</Heading>}
           >
             Brentwood, Essex
+          </Card>
+          <Card
+            to="/services/tiling/case-study-3"
+            image={data.images.nodes[2].childImageSharp.fluid}
+            heading={<Heading el="h3">Period Floor Tiles</Heading>}
+          >
+            Barnes, London
+          </Card>
+          <Card
+            to="/services/tiling/case-study-4"
+            image={data.images.nodes[3].childImageSharp.fluid}
+            heading={<Heading el="h3">Wood Effect Porcelain</Heading>}
+          >
+            Charlton, London
+          </Card>
+          <Card
+            to="/services/tiling/case-study-5"
+            image={data.images.nodes[4].childImageSharp.fluid}
+            heading={<Heading el="h3">Period Floor Tiles</Heading>}
+          >
+            Chelsea, London
           </Card>
         </Grid>
       </Section>
@@ -58,7 +79,7 @@ export const query = graphql`
       }
     }
     images: allFile(
-      filter: { relativePath: { regex: "/tiling-cs(1d|2e).jpg$/" } }
+      filter: { relativePath: { regex: "/tiling-cs(1d|2e|3a|4a|5a).jpg$/" } }
       sort: { fields: relativePath }
     ) {
       nodes {
