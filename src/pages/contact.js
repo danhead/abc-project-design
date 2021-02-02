@@ -10,9 +10,11 @@ import {
   Icon,
   IconWithContent,
   InputText,
+  Label,
   Link,
   Map,
   Section,
+  Select,
   Text
 } from "../components";
 import CheckCircle from "../icons/check-circle.svg";
@@ -35,7 +37,11 @@ export default function Index({ data }) {
       name: e.target.name.value,
       email: e.target.email.value,
       telephone: e.target.telephone.value,
-      message: e.target.message.value
+      start: e.target.start.value,
+      stage: e.target.stage.value,
+      status: e.target.status.value,
+      message: e.target.message.value,
+      file: e.target.file.value
     });
     fetch("/contact", {
       method: "POST",
@@ -170,19 +176,64 @@ export default function Index({ data }) {
                   data-netlify-honeypot="bot-field"
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <InputText id="contact-name" name="name" label="Name" />
-                  <InputText id="contact-email" name="email" label="Email" />
-                  <InputText
-                    id="contact-telephone"
-                    name="telephone"
-                    label="Telephone"
+                  <Label htmlFor="contact-name">Name</Label>
+                  <InputText id="contact-name" name="name" />
+                  <Label htmlFor="contact-email">Email</Label>
+                  <InputText id="contact-email" name="email" />
+                  <Label htmlFor="contact-telephone">Telephone</Label>
+                  <InputText id="contact-telephone" name="telephone" />
+                  <Label htmlFor="contact-start">
+                    When would you like to start?
+                  </Label>
+                  <Select
+                    id="contact-start"
+                    name="start"
+                    options={[
+                      { value: "urgently", label: "Urgently" },
+                      { value: "1week", label: "Within 1 week" },
+                      { value: "2weeks", label: "Within 2 weeks" },
+                      { value: "1month", label: "Within 1 month" },
+                      { value: "2months", label: "Within 2 months" },
+                      { value: "unsure", label: "Not sure" }
+                    ]}
                   />
-                  <InputText
-                    id="contact-message"
-                    name="message"
-                    label="Message"
-                    textArea
+                  <Label htmlFor="contact-stage">
+                    What stage of planning are you at?
+                  </Label>
+                  <Select
+                    id="contact-stage"
+                    name="stage"
+                    options={[
+                      { value: "ready", label: "I'm ready to hire" },
+                      {
+                        value: "budgeting",
+                        label: "I'm planning and budgeting"
+                      },
+                      {
+                        value: "insurance",
+                        label: "I need a quote for insurance"
+                      }
+                    ]}
                   />
+                  <Label htmlFor="contact-status">
+                    Are you the owner of the property?
+                  </Label>
+                  <Select
+                    id="contact-status"
+                    name="status"
+                    options={[
+                      { value: "owner", label: "I own the property" },
+                      { value: "landlord", label: "I am the landlord" },
+                      { value: "tenant", label: "I am a tenant" },
+                      { value: "council", label: "It's a council property" }
+                    ]}
+                  />
+                  <Label htmlFor="contact-message">
+                    Describe what needs to be done
+                  </Label>
+                  <InputText id="contact-message" name="message" textArea />
+                  <Label htmlFor="contact-file">Add a photo</Label>
+                  <input id="contact-file" name="file" type="file" />
                   <Button type="submit">Submit</Button>
                 </form>
               </>
