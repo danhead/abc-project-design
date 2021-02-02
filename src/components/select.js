@@ -7,6 +7,15 @@ const Select = styled.select`
   padding: var(--spacing-y-xs) var(--spacing-x-sm);
   background-color: var(--color-white);
   border: 1px solid var(--color-dark);
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-dark);
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
 `;
 
 export default function InputSelect({ id, name, value, options = [] }) {
