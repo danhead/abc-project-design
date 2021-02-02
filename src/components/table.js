@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const CustomTable = styled.table`
-  margin-bottom: var(--spacing-y-md);
+  margin: 0 auto var(--spacing-y-md);
   border-collapse: collapse;
 
   td {
