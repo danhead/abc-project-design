@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { graphql } from "gatsby";
 import { Marker } from "google-maps-react";
+import { useDropzone } from "react-dropzone";
 import Layout from "../layout";
 import {
   Button,
@@ -22,15 +23,38 @@ import Envelope from "../icons/envelope.svg";
 import Phone from "../icons/phone.svg";
 import Team from "../icons/team.svg";
 
+const encode = data => {
+  const formData = new FormData();
+  Object.keys(data).forEach(k => {
+    formData.append(k, data[k]);
+  });
+  return formData;
+};
+
 export default function Index({ data }) {
   const [submitted, setSubmitted] = useState();
+  const [files, setFiles] = useState({});
+
+  const onDrop = useCallback(acceptedFiles => {
+    setFiles(acceptedFiles[0]);
+  }, []);
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   const handleSubmit = e => {
     e.preventDefault();
-    fetch("/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new FormData(e.target)
-    })
+    const body = encode({
+      "form-name": "contact",
+      name: e.target.name.value,
+      email: e.target.email.value,
+      telephone: e.target.telephone.value,
+      start: e.target.start.value,
+      stage: e.target.stage.value,
+      status: e.target.status.value,
+      message: e.target.message.value,
+      files
+    });
+    console.log(body);
+
+    fetch("/contact", { method: "POST", body })
       .then(res => {
         if (res.status !== 200) {
           console.log("error", res);
@@ -215,8 +239,16 @@ export default function Index({ data }) {
                     Describe what needs to be done
                   </Label>
                   <InputText id="contact-message" name="message" textArea />
-                  <Label htmlFor="contact-files">Add photos</Label>
-                  <input id="contact-files" name="files" type="file" multiple />
+                  <div {...getRootProps()}>
+                    <input name="files" {...getInputProps()} />
+                    {isDragActive ? (
+                      <Text>Drop the images here</Text>
+                    ) : (
+                      <Text>
+                        Drop your images here, or click to select the files
+                      </Text>
+                    )}
+                  </div>
                   <Button type="submit">Submit</Button>
                 </form>
               </>
