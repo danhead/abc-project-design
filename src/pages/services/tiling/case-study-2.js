@@ -32,7 +32,7 @@ export default function Index({ data }) {
           continue with the kitchen installation the following day.
         </Text>
         <Text>
-          The client provided the ceramic floor tiles and we provided the,
+          The client provided the ceramic floor tiles and we provided the
           levelling compound, adhesive and grout.
         </Text>
         <Text>Total price for labour and materials: £1,100.</Text>

@@ -36,6 +36,12 @@ export default function Index({ data }) {
         <Text>
           We provide an initial consultation followed by a competitive quote.
         </Text>
+        <Text>
+          To ensure complete satisfaction we insist on managing the entire
+          installation process. All of our quotations are for a fully inclusive
+          installation service, one price to deliver a fully functioning and
+          completed bathroom.
+        </Text>
       </Section>
       <Section heading="Case studies" variant="primary">
         <Grid columns={[1, 2, 3]} breakpoints={["25em", "50em"]}>
