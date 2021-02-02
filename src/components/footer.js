@@ -40,8 +40,8 @@ export default function Footer() {
               <Icon color="dark" size="lg">
                 <Phone />
               </Icon>
-              <Link color="dark" size="lg" to="tel:+447123456789">
-                07123 456789
+              <Link color="dark" size="lg" to="tel:+447539051512">
+                07539 051512
               </Link>
             </IconWithContent>
           </Cell>

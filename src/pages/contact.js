@@ -75,22 +75,34 @@ export default function Index({ data }) {
             <ul>
               <li>
                 <Text>
-                  Nicholas Day - <em>Sales and Marketing Manager</em>
+                  <Link to="mailto:quotations@abcprojectdesign.com">
+                    Nicholas Day
+                  </Link>{" "}
+                  &ndash; <em>Sales and Marketing Manager</em>
                 </Text>
               </li>
               <li>
                 <Text>
-                  Daniel Costea - <em>Project Director</em>
+                  <Link to="mailto:daniel.costea@abcprojectdesign.com">
+                    Daniel Costea
+                  </Link>{" "}
+                  &ndash; <em>Project Director</em>
                 </Text>
               </li>
               <li>
                 <Text>
-                  Maria Antonia - <em>After Sales Manager</em>
+                  <Link to="mailto:maria.antonia@abcprojectdesign.com">
+                    Maria Antonia
+                  </Link>{" "}
+                  &ndash; <em>Design and Consultation Manager</em>
                 </Text>
               </li>
               <li>
                 <Text>
-                  Harry Jackson - <em>Design and Consultation Manager</em>
+                  <Link to="mailto:harry.jackson@abcprojectdesign.com">
+                    Harry Jackson
+                  </Link>{" "}
+                  &ndash; <em>After Sales Manager</em>
                 </Text>
               </li>
             </ul>
@@ -98,8 +110,16 @@ export default function Index({ data }) {
               <Icon color="dark" size="lg">
                 <Phone />
               </Icon>
-              <Link color="dark" size="lg" to="tel:+447123456789">
-                07123 456789
+              <Link color="dark" size="lg" to="tel:+447539051512">
+                07539 051512
+              </Link>
+            </IconWithContent>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Phone />
+              </Icon>
+              <Link color="dark" size="lg" to="tel:+441708938455">
+                01708 938455
               </Link>
             </IconWithContent>
             <IconWithContent>
