@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `ABC Project Design`,
     description: `Easy as ABC`,
-    keywords: `Foo bar baz`,
+    keywords: `Bathroom Tiling Fitting Installation London Essex Suffolk Hertfordshire`,
     secrets: { GMAPS_APIKEY },
     navData: [
       {
@@ -75,7 +75,7 @@ module.exports = {
         short_name: `ABC`,
         start_url: `/`,
         icon: `src/images/icon.png`,
-        background_color: `#e5ffde`,
+        background_color: `#bbcbcb`,
         theme_color: `#9c0905`,
         display: `standalone`
       }
