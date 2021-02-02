@@ -40,7 +40,7 @@ export default function Footer() {
               <Icon color="dark" size="lg">
                 <Phone />
               </Icon>
-              <Link color="dark" size="lg" to="tel:+447539051512">
+              <Link color="dark" size="lg" to="tel:+447539051512" noDecoration>
                 07539 051512
               </Link>
             </IconWithContent>
@@ -54,6 +54,7 @@ export default function Footer() {
                 color="dark"
                 size="md"
                 to="mailto:quotations@abcprojectdesign.com"
+                noDecoration
               >
                 quotations@abcprojectdesign.com
               </Link>

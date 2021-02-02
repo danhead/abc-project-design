@@ -110,7 +110,7 @@ export default function Index({ data }) {
               <Icon color="dark" size="lg">
                 <Phone />
               </Icon>
-              <Link color="dark" size="lg" to="tel:+447539051512">
+              <Link color="dark" size="lg" to="tel:+447539051512" noDecoration>
                 07539 051512
               </Link>
             </IconWithContent>
@@ -118,7 +118,7 @@ export default function Index({ data }) {
               <Icon color="dark" size="lg">
                 <Phone />
               </Icon>
-              <Link color="dark" size="lg" to="tel:+441708938455">
+              <Link color="dark" size="lg" to="tel:+441708938455" noDecoration>
                 01708 938455
               </Link>
             </IconWithContent>
@@ -130,6 +130,7 @@ export default function Index({ data }) {
                 color="dark"
                 size="md"
                 to="mailto:quotations@abcprojectdesign.com"
+                noDecoration
               >
                 quotations@abcprojectdesign.com
               </Link>

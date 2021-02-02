@@ -9,12 +9,26 @@ const StyledLink = styled.a`
     css`
       font-size: var(--font-size-${props.size});
     `}
+  color: var(--color-dark);
   ${props =>
-    props.color &&
-    css`
-      color: var(--theme-color-${props.color});
-    `}
-  text-decoration: none;
+    props.noDecoration
+      ? css`
+          text-decoration: none;
+        `
+      : css`
+          text-decoration-color: var(--color-primary);
+          text-decoration-thickness: 2px;
+          text-underline-offset: 3px;
+        `}
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-dark);
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
 `;
 
 export default function Link({ children, to, ...other }) {
