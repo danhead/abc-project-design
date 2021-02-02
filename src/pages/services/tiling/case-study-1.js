@@ -6,6 +6,7 @@ import {
   Header,
   Heading,
   Section,
+  Table,
   Text
 } from "../../../components";
 
@@ -18,6 +19,26 @@ export default function Index({ data }) {
         <Text size="lg">Eltham, London</Text>
       </Header>
       <Section>
+        <Table>
+          <tbody>
+            <tr>
+              <td>Key features</td>
+              <td>Under floor heating</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>£2,400</td>
+            </tr>
+            <tr>
+              <td>Time taken</td>
+              <td>4 days</td>
+            </tr>
+            <tr>
+              <td>Date</td>
+              <td>November 2020</td>
+            </tr>
+          </tbody>
+        </Table>
         <Text>
           20m<sup>2</sup> of floor tiles laid in a new extension.
         </Text>
