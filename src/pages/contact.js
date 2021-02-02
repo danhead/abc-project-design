@@ -1,10 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { Marker } from "google-maps-react";
-import { useDropzone } from "react-dropzone";
 import Layout from "../layout";
 import {
   Button,
+  CustomDropzone,
   Grid,
   Header,
   Heading,
@@ -33,12 +33,9 @@ const encode = data => {
 
 export default function Index({ data }) {
   const [submitted, setSubmitted] = useState();
+  const [uploadFiles, setUploadFiles] = useState();
   const [files, setFiles] = useState({});
 
-  const onDrop = useCallback(acceptedFiles => {
-    setFiles(acceptedFiles[0]);
-  }, []);
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   const handleSubmit = e => {
     e.preventDefault();
     const body = encode({
@@ -196,6 +193,7 @@ export default function Index({ data }) {
                     id="contact-start"
                     name="start"
                     options={[
+                      { value: "", label: "" },
                       { value: "urgently", label: "Urgently" },
                       { value: "1week", label: "Within 1 week" },
                       { value: "2weeks", label: "Within 2 weeks" },
@@ -211,6 +209,7 @@ export default function Index({ data }) {
                     id="contact-stage"
                     name="stage"
                     options={[
+                      { value: "", label: "" },
                       { value: "ready", label: "I'm ready to hire" },
                       {
                         value: "budgeting",
@@ -229,6 +228,7 @@ export default function Index({ data }) {
                     id="contact-status"
                     name="status"
                     options={[
+                      { value: "", label: "" },
                       { value: "owner", label: "I own the property" },
                       { value: "landlord", label: "I am the landlord" },
                       { value: "tenant", label: "I am a tenant" },
@@ -239,17 +239,21 @@ export default function Index({ data }) {
                     Describe what needs to be done
                   </Label>
                   <InputText id="contact-message" name="message" textArea />
-                  <div {...getRootProps()}>
-                    <input name="files" {...getInputProps()} />
-                    {isDragActive ? (
-                      <Text>Drop the images here</Text>
-                    ) : (
-                      <Text>
-                        Drop your images here, or click to select the files
-                      </Text>
-                    )}
-                  </div>
-                  <Button type="submit">Submit</Button>
+                  <Button
+                    style={{ display: uploadFiles ? "none" : "inline-block" }}
+                    onClick={() => setUploadFiles(true)}
+                  >
+                    Upload images
+                  </Button>
+                  <CustomDropzone
+                    style={{ display: uploadFiles ? "block" : "none" }}
+                    name="files"
+                    files={files}
+                    setFiles={setFiles}
+                  />
+                  <Button type="submit" float="right">
+                    Submit
+                  </Button>
                 </form>
               </>
             )}
