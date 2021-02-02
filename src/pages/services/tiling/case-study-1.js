@@ -13,14 +13,20 @@ export default function Index({ data }) {
   const images = data.images.nodes.map(node => node.childImageSharp);
   return (
     <Layout location="/services/tiling/case-study-1">
-      <Header image={images[0].full}>
-        <Heading shadow="xl-black">Under Floor Heating</Heading>
-        <Text size="lg">Location unknown</Text>
+      <Header image={images[3].full}>
+        <Heading shadow="xl-black">New Extension</Heading>
+        <Text size="lg">Eltham, London</Text>
       </Header>
       <Section>
         <Text>
-          <em>Case study info needed</em>
+          20m<sup>2</sup> of floor tiles laid in a new extension.
         </Text>
+        <Text>
+          We fitted under floor heating before laying self levelling compound.
+        </Text>
+        <Text>The tiles were also grouted and sealed.</Text>
+        <Text>The project took 4 days to complete.</Text>
+        <Text>Total price for labour and materials: £2,400.</Text>
       </Section>
       <Section heading="Gallery" variant="primary">
         <CustomGallery images={images} />

@@ -31,8 +31,10 @@ export default function Index({ data }) {
           <Card
             to="/services/tiling/case-study-1"
             image={data.images.nodes[0].childImageSharp.fluid}
-            heading={<Heading el="h3">Under Floor Heating</Heading>}
-          >Location unknown</Card>
+            heading={<Heading el="h3">New Extension</Heading>}
+          >
+            Eltham, London
+          </Card>
           <Card
             to="/services/tiling/case-study-2"
             image={data.images.nodes[1].childImageSharp.fluid}
@@ -56,7 +58,7 @@ export const query = graphql`
       }
     }
     images: allFile(
-      filter: { relativePath: { regex: "/tiling-cs(.*)a.jpg$/" } }
+      filter: { relativePath: { regex: "/tiling-cs(1d|2e).jpg$/" } }
       sort: { fields: relativePath }
     ) {
       nodes {

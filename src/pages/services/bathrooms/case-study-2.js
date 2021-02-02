@@ -31,11 +31,11 @@ export default function Index({ data }) {
             </tr>
             <tr>
               <td>Time taken</td>
-              <td>X days</td>
+              <td>10 days</td>
             </tr>
             <tr>
               <td>Date</td>
-              <td>Jan 2099</td>
+              <td>November 2020</td>
             </tr>
           </tbody>
         </Table>

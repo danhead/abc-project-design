@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../layout";
-import { Header, Map, Section, Text } from "../components";
+import { Header, Link, Map, Section, Text } from "../components";
 import { Polyline } from "google-maps-react";
 
 const triangleCoords = [
@@ -49,7 +49,15 @@ export default function Index() {
         avoidNav
       ></Header>
       <Section heading="Area covered">
-        <Text>Info about area covered here</Text>
+        <Text>
+          Our services are available, in London, Hertfordshire, Cambridgeshire,
+          Essex and Kent.
+        </Text>
+        <Text>
+          The area highlighted in the map is a rough guideline, if you are just
+          outside the area then please do feel free to{" "}
+          <Link to="/contact">get in touch</Link>.
+        </Text>
       </Section>
     </Layout>
   );
