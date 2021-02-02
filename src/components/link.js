@@ -18,9 +18,15 @@ const StyledLink = styled.a`
 `;
 
 export default function Link({ children, to, ...other }) {
-  const isInternal = /^\/(?!\/)/.test(to);
+  if (/^\/(?!\/)/.test(to)) {
+    return (
+      <StyledLink to={to} as={GatsbyLink} {...other}>
+        {children}
+      </StyledLink>
+    );
+  }
   return (
-    <StyledLink href={to} as={isInternal ? GatsbyLink : "a"} {...other}>
+    <StyledLink href={to} {...other}>
       {children}
     </StyledLink>
   );
