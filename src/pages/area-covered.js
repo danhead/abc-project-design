@@ -22,7 +22,7 @@ const triangleCoords = [
 
 export default function Index() {
   return (
-    <Layout location="/area-covered">
+    <Layout location="/area-covered" title="Area Covered">
       <Header
         map={
           <Map

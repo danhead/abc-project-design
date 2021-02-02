@@ -5,7 +5,7 @@ import { Header, Link, Section } from "../components";
 
 export default function Index({ data }) {
   return (
-    <Layout>
+    <Layout title="Page not found">
       <Header image={data.headerImage.childImageSharp.fluid}>
         <h2>404</h2>
       </Header>

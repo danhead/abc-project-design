@@ -13,7 +13,10 @@ import {
 export default function Index({ data }) {
   const images = data.images.nodes.map(node => node.childImageSharp);
   return (
-    <Layout location="/services/tiling/case-study-1">
+    <Layout
+      location="/services/tiling/case-study-1"
+      title="New Extension Case Study"
+    >
       <Header image={images[3].full}>
         <Heading shadow="xl-black">New Extension</Heading>
         <Text size="lg">Eltham, London</Text>

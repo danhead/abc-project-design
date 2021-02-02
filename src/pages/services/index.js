@@ -5,7 +5,7 @@ import { Card, Grid, Header, Heading, Section } from "../../components";
 
 export default function Index({ data }) {
   return (
-    <Layout location="/services">
+    <Layout location="/services" title="Services">
       <Header image={data.headerImage.childImageSharp.fluid}>
         <Heading shadow="xl-white">Services</Heading>
       </Header>

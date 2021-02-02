@@ -13,7 +13,10 @@ import {
 export default function Index({ data }) {
   const images = data.images.nodes.map(node => node.childImageSharp);
   return (
-    <Layout location="/services/tiling/case-study-2">
+    <Layout
+      location="/services/tiling/case-study-2"
+      title="Ceramic Floor Tiles Case Study"
+    >
       <Header image={images[3].full}>
         <Heading shadow="xl-black">Ceramic Floor Tiles</Heading>
         <Text size="lg">Brentwood, Essex</Text>

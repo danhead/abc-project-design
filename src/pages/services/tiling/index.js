@@ -12,7 +12,7 @@ import {
 
 export default function Index({ data }) {
   return (
-    <Layout location="/services/tiling">
+    <Layout location="/services/tiling" title="Tiling">
       <Header image={data.headerImage.childImageSharp.fluid}>
         <Heading shadow="xl-white">Tiling</Heading>
       </Header>

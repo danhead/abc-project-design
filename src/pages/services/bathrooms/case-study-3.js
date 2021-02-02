@@ -13,7 +13,7 @@ import {
 export default function Index({ data }) {
   const images = data.images.nodes.map(node => node.childImageSharp);
   return (
-    <Layout location="/services/bathrooms/case-study-3">
+    <Layout location="/services/bathrooms/case-study-3" title="Modest Shower Room Case Study">
       <Header image={images[0].full}>
         <Heading shadow="xl-black">Modest Shower Room</Heading>
         <Text size="lg">Location unknown</Text>

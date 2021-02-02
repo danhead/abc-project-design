@@ -89,7 +89,7 @@ const GlobalStyles = css`
   }
 `;
 
-export default function Layout({ location, children }) {
+export default function Layout({ location, title: pageTitle, children }) {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -115,7 +115,7 @@ export default function Layout({ location, children }) {
     <>
       <main>
         <Helmet
-          title={title}
+          title={pageTitle ? `${pageTitle} : ${title}` : title}
           meta={[
             { name: "description", content: description },
             { name: "keywords", content: keywords }
