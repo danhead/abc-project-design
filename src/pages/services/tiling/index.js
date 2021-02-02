@@ -63,6 +63,13 @@ export default function Index({ data }) {
           >
             Chelsea, London
           </Card>
+          <Card
+            to="/services/tiling/case-study-6"
+            image={data.images.nodes[5].childImageSharp.fluid}
+            heading={<Heading el="h3">Patterned Floor Tiles</Heading>}
+          >
+            Fulham, London
+          </Card>
         </Grid>
       </Section>
     </Layout>
@@ -79,7 +86,7 @@ export const query = graphql`
       }
     }
     images: allFile(
-      filter: { relativePath: { regex: "/tiling-cs(1d|2e|3a|4a|5a).jpg$/" } }
+      filter: { relativePath: { regex: "/tiling-cs(1d|2e|3a|4a|5a|6a).jpg$/" } }
       sort: { fields: relativePath }
     ) {
       nodes {
