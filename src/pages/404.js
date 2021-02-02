@@ -1,17 +1,24 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from "@emotion/styled";
 import Layout from "../layout";
-import { Header, Link, Section } from "../components";
+import { Header, Heading, Link, Section, Text } from "../components";
+
+const Container = styled.div`
+  text-align: center;
+`;
 
 export default function Index({ data }) {
   return (
     <Layout title="Page not found">
       <Header image={data.headerImage.childImageSharp.fluid}>
-        <h2>404</h2>
+        <Heading shadow="xl-light">Page not found</Heading>
+        <Text size="lg">404</Text>
       </Header>
       <Section>
-        <p>Page not found</p>
-        <Link to="/">Back Home</Link>
+        <Container>
+          <Link to="/">Back Home</Link>
+        </Container>
       </Section>
     </Layout>
   );
