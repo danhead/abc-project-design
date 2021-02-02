@@ -12,7 +12,12 @@ const Link = styled(GatsbyLink)`
   cursor: pointer;
 
   &:focus {
-    outline: none;
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-white);
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
   }
 
   @media (min-width: 30em) {
