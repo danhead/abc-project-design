@@ -36,6 +36,11 @@ export default function Index({ data }) {
   const [uploadFiles, setUploadFiles] = useState();
   const [files, setFiles] = useState({});
 
+  const handleUploadClick = e => {
+    e.preventDefault();
+    setUploadFiles(true);
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
     const body = encode({
@@ -49,7 +54,6 @@ export default function Index({ data }) {
       message: e.target.message.value,
       files
     });
-    console.log(body);
 
     fetch("/contact", { method: "POST", body })
       .then(res => {
@@ -241,7 +245,7 @@ export default function Index({ data }) {
                   <InputText id="contact-message" name="message" textArea />
                   <Button
                     style={{ display: uploadFiles ? "none" : "inline-block" }}
-                    onClick={() => setUploadFiles(true)}
+                    onClick={handleUploadClick}
                   >
                     Upload images
                   </Button>
