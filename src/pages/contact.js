@@ -22,31 +22,14 @@ import Envelope from "../icons/envelope.svg";
 import Phone from "../icons/phone.svg";
 import Team from "../icons/team.svg";
 
-const encodeData = data =>
-  Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join("&");
-
 export default function Index({ data }) {
   const [submitted, setSubmitted] = useState();
-
   const handleSubmit = e => {
     e.preventDefault();
-    const body = encodeData({
-      "form-name": "contact",
-      name: e.target.name.value,
-      email: e.target.email.value,
-      telephone: e.target.telephone.value,
-      start: e.target.start.value,
-      stage: e.target.stage.value,
-      status: e.target.status.value,
-      message: e.target.message.value,
-      file: e.target.file.value
-    });
     fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body
+      body: new FormData(e.target)
     })
       .then(res => {
         if (res.status !== 200) {
@@ -232,8 +215,8 @@ export default function Index({ data }) {
                     Describe what needs to be done
                   </Label>
                   <InputText id="contact-message" name="message" textArea />
-                  <Label htmlFor="contact-file">Add a photo</Label>
-                  <input id="contact-file" name="file" type="file" />
+                  <Label htmlFor="contact-files">Add photos</Label>
+                  <input id="contact-files" name="files" type="file" multiple />
                   <Button type="submit">Submit</Button>
                 </form>
               </>
