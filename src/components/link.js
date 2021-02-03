@@ -20,6 +20,11 @@ const StyledLink = styled.a`
           text-decoration-thickness: 2px;
           text-underline-offset: 3px;
         `}
+  ${props =>
+    props.weight &&
+    css`
+      font-weight: ${props.weight};
+    `}
 
   &:focus {
     outline: 0;
