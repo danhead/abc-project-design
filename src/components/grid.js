@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 
 const Container = styled.div`
   display: grid;
-  gap: var(--spacing-x-sm) var(--spacing-y-sm);
+  gap: var(--spacing-y-sm) var(--spacing-x-md);
   ${props =>
     props.columns &&
     props.columns.map((column, i) =>
@@ -18,7 +18,7 @@ const Container = styled.div`
     ${
       i === 1 &&
       css`
-        gap: var(--spacing-x-md) var(--spacing-y-md);
+        gap: var(--spacing-y-md) var(--spacing-x-lg);
       `
     }
 `
