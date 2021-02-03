@@ -11,6 +11,7 @@ import {
   Icon,
   IconWithContent,
   InputText,
+  Interrupt,
   Label,
   Link,
   Map,
@@ -32,7 +33,7 @@ const encode = data => {
 };
 
 export default function Index({ data }) {
-  const [submitted, setSubmitted] = useState();
+  const [formState, setFormState] = useState();
   const [uploadFiles, setUploadFiles] = useState();
   const [files, setFiles] = useState({});
 
@@ -43,6 +44,7 @@ export default function Index({ data }) {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setFormState("submitting");
     const body = encode({
       "form-name": "contact",
       name: e.target.name.value,
@@ -55,16 +57,15 @@ export default function Index({ data }) {
       message: e.target.message.value,
       files
     });
-
     fetch("/contact", { method: "POST", body })
       .then(res => {
         if (res.status !== 200) {
-          console.log("error", res);
+          setFormState("error");
         } else {
-          setSubmitted(true);
+          setFormState("success");
         }
       })
-      .catch(error => console.log(error));
+      .catch(() => setFormState("error"));
   };
   return (
     <Layout location="/contact" title="Contact us">
@@ -151,8 +152,8 @@ export default function Index({ data }) {
               </Link>
             </IconWithContent>
           </div>
-          <div>
-            {submitted ? (
+          <div style={{ position: "relative" }}>
+            {formState === "success" && (
               <IconWithContent>
                 <Icon color="dark" size="lg">
                   <CheckCircle />
@@ -166,8 +167,10 @@ export default function Index({ data }) {
                   </Text>
                 </>
               </IconWithContent>
-            ) : (
+            )}
+            {formState !== "success" && (
               <>
+                {formState === "submitting" && <Interrupt />}
                 <IconWithContent>
                   <Icon color="dark" size="lg">
                     <Envelope />
@@ -176,11 +179,26 @@ export default function Index({ data }) {
                     Contact us
                   </Text>
                 </IconWithContent>
+                {formState === "error" && (
+                  <>
+                    <Text size="lg" color="primary" weight="bold">
+                      There was an error submitting the form, please try again
+                      later.
+                    </Text>
+                    <Text color="primary">
+                      Alternatively, please feel free to email us at{" "}
+                      <Link to="mailto:quotations@abcprojectdesign.com">
+                        quotations@abcprojectdesign.com
+                      </Link>
+                      .
+                    </Text>
+                  </>
+                )}
                 <form
                   name="contact"
                   method="POST"
                   action="/contact"
-                  onSubmit={handleSubmit}
+                  onSubmit={e => handleSubmit(e, scroll)}
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
@@ -261,7 +279,9 @@ export default function Index({ data }) {
                   </Label>
                   <InputText id="contact-message" name="message" textArea />
                   <Button
-                    style={{ display: uploadFiles ? "none" : "inline-block" }}
+                    style={{
+                      display: uploadFiles ? "none" : "inline-block"
+                    }}
                     onClick={handleUploadClick}
                   >
                     Upload images
@@ -273,7 +293,7 @@ export default function Index({ data }) {
                     setFiles={setFiles}
                   />
                   <Button type="submit" float="right">
-                    Submit
+                    {formState === "submitting" ? "Submitting..." : "Submit"}
                   </Button>
                 </form>
               </>

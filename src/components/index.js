@@ -12,6 +12,7 @@ export { default as Heading } from "./heading";
 export { default as Icon } from "./icon";
 export { default as IconWithContent } from "./icon-with-content";
 export { default as InputText } from "./input-text";
+export { default as Interrupt } from "./interrupt";
 export { default as Label } from "./label";
 export { default as Link } from "./link";
 export { default as Map } from "./map";

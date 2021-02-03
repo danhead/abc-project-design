@@ -24,12 +24,13 @@ const StyledText = styled.p`
     css`
       color: var(--color-${props.color});
     `}
+  ${props =>
+    props.weight &&
+    css`
+      font-weight: ${props.weight};
+    `}
 `;
 
 export default function Text({ children, ...props }) {
-  return (
-    <StyledText {...props}>
-      {children}
-    </StyledText>
-  );
+  return <StyledText {...props}>{children}</StyledText>;
 }
