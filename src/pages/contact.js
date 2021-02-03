@@ -78,95 +78,22 @@ export default function Index({ data }) {
         </Heading>
       </Header>
       <Section>
-        <Grid columns={[1, 2]} breakpoints={["40rem"]}>
-          <div>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Team />
-              </Icon>
-              <Text color="dark" size="lg">
-                The team
-              </Text>
-            </IconWithContent>
-            <ul>
-              <li>
-                <Text>
-                  <Link to="mailto:quotations@abcprojectdesign.com">
-                    Nicholas Day
-                  </Link>{" "}
-                  &ndash; <em>Sales and Marketing Manager</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:daniel.costea@abcprojectdesign.com">
-                    Daniel Costea
-                  </Link>{" "}
-                  &ndash; <em>Project Director</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:maria.antonia@abcprojectdesign.com">
-                    Maria Antonia
-                  </Link>{" "}
-                  &ndash; <em>Design and Consultation Manager</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:harry.jackson@abcprojectdesign.com">
-                    Harry Jackson
-                  </Link>{" "}
-                  &ndash; <em>After Sales Manager</em>
-                </Text>
-              </li>
-            </ul>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link color="dark" size="lg" to="tel:+447539051512" noDecoration>
-                07539 051512
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link color="dark" size="lg" to="tel:+441708938455" noDecoration>
-                01708 938455
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Envelope />
-              </Icon>
-              <Link
-                color="dark"
-                size="md"
-                to="mailto:quotations@abcprojectdesign.com"
-                noDecoration
-              >
-                quotations@abcprojectdesign.com
-              </Link>
-            </IconWithContent>
-          </div>
+        <Grid columns={[1, 2]} breakpoints={["40em"]} verticalSeparator="40em">
           <div style={{ position: "relative" }}>
             {formState === "success" && (
-              <IconWithContent>
-                <Icon color="dark" size="lg">
-                  <CheckCircle />
-                </Icon>
-                <>
+              <>
+                <IconWithContent>
+                  <Icon color="dark" size="lg">
+                    <CheckCircle />
+                  </Icon>
                   <Text color="dark" size="lg">
-                    Thank you for contacting us
+                    Thank you for contacting us!
                   </Text>
-                  <Text color="dark" size="lg">
-                    We will be in touch shortly
-                  </Text>
-                </>
-              </IconWithContent>
+                </IconWithContent>
+                <Text>
+                  We will get back to you in the next two working days.
+                </Text>
+              </>
             )}
             {formState !== "success" && (
               <>
@@ -298,6 +225,79 @@ export default function Index({ data }) {
                 </form>
               </>
             )}
+          </div>
+          <div>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Team />
+              </Icon>
+              <Text color="dark" size="lg">
+                The team
+              </Text>
+            </IconWithContent>
+            <ul>
+              <li>
+                <Text>
+                  <Link to="mailto:quotations@abcprojectdesign.com">
+                    Nicholas Day
+                  </Link>{" "}
+                  &ndash; <em>Sales and Marketing Manager</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <Link to="mailto:daniel.costea@abcprojectdesign.com">
+                    Daniel Costea
+                  </Link>{" "}
+                  &ndash; <em>Project Director</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <Link to="mailto:maria.antonia@abcprojectdesign.com">
+                    Maria Antonia
+                  </Link>{" "}
+                  &ndash; <em>Design and Consultation Manager</em>
+                </Text>
+              </li>
+              <li>
+                <Text>
+                  <Link to="mailto:harry.jackson@abcprojectdesign.com">
+                    Harry Jackson
+                  </Link>{" "}
+                  &ndash; <em>After Sales Manager</em>
+                </Text>
+              </li>
+            </ul>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Phone />
+              </Icon>
+              <Link color="dark" size="lg" to="tel:+447539051512" noDecoration>
+                07539 051512
+              </Link>
+            </IconWithContent>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Phone />
+              </Icon>
+              <Link color="dark" size="lg" to="tel:+441708938455" noDecoration>
+                01708 938455
+              </Link>
+            </IconWithContent>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Envelope />
+              </Icon>
+              <Link
+                color="dark"
+                size="md"
+                to="mailto:quotations@abcprojectdesign.com"
+                noDecoration
+              >
+                quotations@abcprojectdesign.com
+              </Link>
+            </IconWithContent>
           </div>
         </Grid>
       </Section>
