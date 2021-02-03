@@ -51,6 +51,7 @@ export default function Index({ data }) {
       start: e.target.start.value,
       stage: e.target.stage.value,
       status: e.target.status.value,
+      budget: e.target.budget.value,
       message: e.target.message.value,
       files
     });
@@ -191,7 +192,7 @@ export default function Index({ data }) {
                   <Label htmlFor="contact-telephone">Telephone</Label>
                   <InputText id="contact-telephone" name="telephone" />
                   <Label htmlFor="contact-start">
-                    When would you like to start?
+                    When would you like the job to start?
                   </Label>
                   <Select
                     id="contact-start"
@@ -237,6 +238,22 @@ export default function Index({ data }) {
                       { value: "landlord", label: "I am the landlord" },
                       { value: "tenant", label: "I am a tenant" },
                       { value: "council", label: "It's a council property" }
+                    ]}
+                  />
+                  <Label htmlFor="contact-budget">What is your budget?</Label>
+                  <Select
+                    id="contact-budget"
+                    name="budget"
+                    options={[
+                      { value: "under2000", label: "Under £2,000" },
+                      { value: "under3000", label: "Under £3,000" },
+                      { value: "under4000", label: "Under £4,000" },
+                      { value: "under5000", label: "Under £5,000" },
+                      { value: "under6000", label: "Under £6,000" },
+                      { value: "under7000", label: "Under £7,000" },
+                      { value: "under8000", label: "Under £8,000" },
+                      { value: "under9000", label: "Under £9,000" },
+                      { value: "under10000", label: "Under £10,000" }
                     ]}
                   />
                   <Label htmlFor="contact-message">
