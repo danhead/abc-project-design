@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import JSZip from "jszip";
 import styled from "@emotion/styled";
 import { Text } from ".";
 
@@ -21,7 +22,19 @@ const Container = styled.div`
 
 export default function CustomDropzone({ name, files, setFiles, ...other }) {
   const onDrop = useCallback(acceptedFiles => {
-    setFiles(acceptedFiles[0]);
+    if (acceptedFiles.length > 1) {
+      const zip = new JSZip();
+      acceptedFiles.forEach(file => zip.file(file.name, file));
+      zip.generateAsync({ type: "blob" }).then(blob => {
+        const zippedFiles = new File([blob], "files.zip", {
+          lastModified: Date.now(),
+          type: "application/zip"
+        });
+        setFiles(zippedFiles);
+      });
+    } else {
+      setFiles(acceptedFiles[0]);
+    }
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   return (
