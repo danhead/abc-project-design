@@ -78,6 +78,16 @@ export default function Index({ data }) {
         </Heading>
       </Header>
       <Section>
+        <Text size="xl">
+          Are you planning a new bathroom? Are you looking for inspiration? Our
+          team are ready to help you through every step of the journey.
+        </Text>
+        <Text>
+          The price to fit a new bathroom starts at £3,500, increasing up to
+          £20,000. Our quotes include disposal of rubbish, fitting the new
+          bathroom, labour and building materials for tiling, plastering,
+          painting and decorating. It does not include bathroom suites or tiles.
+        </Text>
         <Grid columns={[1, 2]} breakpoints={["40em"]} verticalSeparator="40em">
           <div style={{ position: "relative" }}>
             {formState === "success" && (
@@ -281,6 +291,20 @@ export default function Index({ data }) {
                 noDecoration
               >
                 07539 051512
+              </Link>
+            </IconWithContent>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Phone />
+              </Icon>
+              <Link
+                weight="bold"
+                color="dark"
+                size="lg"
+                to="tel:+447378839358"
+                noDecoration
+              >
+                07378 839358
               </Link>
             </IconWithContent>
             <IconWithContent>

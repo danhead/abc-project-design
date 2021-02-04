@@ -20,11 +20,12 @@ const Content = styled.div`
 
 const Cell = styled.div`
   display: flex;
+  flex-direction: column;
   ${props =>
     props.flexEnd &&
     css`
       @media (min-width: ${props.flexEnd}) {
-        justify-content: flex-end;
+        align-items: flex-end;
       }
     `}
 `;
@@ -48,6 +49,20 @@ export default function Footer() {
                 noDecoration
               >
                 07539 051512
+              </Link>
+            </IconWithContent>
+            <IconWithContent>
+              <Icon color="dark" size="lg">
+                <Phone />
+              </Icon>
+              <Link
+                weight="bold"
+                color="dark"
+                size="lg"
+                to="tel:+447378839358"
+                noDecoration
+              >
+                07378 839358
               </Link>
             </IconWithContent>
           </Cell>
