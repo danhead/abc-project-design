@@ -14,7 +14,9 @@ export default function Index({ data }) {
   return (
     <Layout location="/services/tiling" title="Tiling">
       <Header image={data.headerImage.childImageSharp.fluid}>
-        <Heading shadow="xl-white">Tiling</Heading>
+        <Heading shadow="xl-black" color="dark-grey">
+          Tiling
+        </Heading>
       </Header>
       <Section heading="We specialise in floor tiling">
         <Text>

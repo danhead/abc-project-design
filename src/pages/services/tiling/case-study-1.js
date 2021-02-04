@@ -18,8 +18,12 @@ export default function Index({ data }) {
       title="New Extension Case Study"
     >
       <Header image={images[3].full}>
-        <Heading shadow="xl-black">New Extension</Heading>
-        <Text size="lg">Eltham, London</Text>
+        <Heading shadow="xl-black" color="dark-grey">
+          New Extension
+        </Heading>
+        <Text size="lg" color="dark-grey">
+          Eltham, London
+        </Text>
       </Header>
       <Section>
         <Table>

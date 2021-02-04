@@ -64,7 +64,7 @@ export default function Index({ data }) {
             image={data.images.nodes[2].childImageSharp.fluid}
             heading={<Heading el="h3">Modest Shower Room</Heading>}
           >
-            Location unknown
+            Maldon, Essex
           </Card>
           <Card
             to="/services/bathrooms/case-study-4"

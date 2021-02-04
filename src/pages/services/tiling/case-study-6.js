@@ -18,8 +18,12 @@ export default function Index({ data }) {
       title="Patterned Floor Tiles Case Study"
     >
       <Header image={images[0].full}>
-        <Heading shadow="xl-black">Patterned Floor Tiles</Heading>
-        <Text size="lg">Fulham, London</Text>
+        <Heading shadow="xl-black" color="dark-grey">
+          Patterned Floor Tiles
+        </Heading>
+        <Text size="lg" color="dark-grey">
+          Fulham, London
+        </Text>
       </Header>
       <Section>
         <Table>

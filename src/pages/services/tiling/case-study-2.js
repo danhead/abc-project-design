@@ -18,7 +18,7 @@ export default function Index({ data }) {
       title="Ceramic Floor Tiles Case Study"
     >
       <Header image={images[3].full}>
-        <Heading shadow="xl-black">Ceramic Floor Tiles</Heading>
+        <Heading shadow="xl-white">Ceramic Floor Tiles</Heading>
         <Text size="lg">Brentwood, Essex</Text>
       </Header>
       <Section>

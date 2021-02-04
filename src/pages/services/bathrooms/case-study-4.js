@@ -13,9 +13,12 @@ import {
 export default function Index({ data }) {
   const images = data.images.nodes.map(node => node.childImageSharp);
   return (
-    <Layout location="/services/bathrooms/case-study-4" title="Period with a Modern Twist Case Study">
+    <Layout
+      location="/services/bathrooms/case-study-4"
+      title="Period with a Modern Twist Case Study"
+    >
       <Header image={images[0].full}>
-        <Heading shadow="xl-black">Period with a Modern Twist</Heading>
+        <Heading shadow="xl-white">Period with a Modern Twist</Heading>
         <Text size="lg">Hampstead, London</Text>
       </Header>
       <Section>

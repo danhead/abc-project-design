@@ -18,7 +18,7 @@ export default function Index({ data }) {
       title="Period Floor Tiles Case Study"
     >
       <Header image={images[0].full}>
-        <Heading shadow="xl-black">Period Floor Tiles</Heading>
+        <Heading shadow="xl-white">Period Floor Tiles</Heading>
         <Text size="lg">Barnes, London</Text>
       </Header>
       <Section>
