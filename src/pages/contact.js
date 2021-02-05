@@ -4,7 +4,6 @@ import { Marker } from "google-maps-react";
 import Layout from "../layout";
 import {
   Button,
-  CustomDropzone,
   Grid,
   Header,
   Heading,
@@ -75,10 +74,11 @@ export default function Index({ data }) {
           team are ready to help you through every step of the journey.
         </Text>
         <Text>
-          The price to fit a new bathroom starts at £3,500, increasing up to
-          £20,000. Our quotes include disposal of rubbish, fitting the new
-          bathroom, labour and building materials for tiling, plastering,
-          painting and decorating. It does not include bathroom suites or tiles.
+          A typical bathroom refurbishment starts from £3,500, increasing up to
+          £20,000. Our quotes include stripping out the old bathroom, disposal
+          of rubbish, fitting the new bathroom, labour and building materials
+          for tiling, plastering, painting and decorating. It does not include
+          bathroom suites or tiles.
         </Text>
         <Grid columns={[1, 2]} breakpoints={["40em"]} verticalSeparator="40em">
           <div style={{ position: "relative" }}>
