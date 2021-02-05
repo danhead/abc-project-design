@@ -34,13 +34,6 @@ const encode = data => {
 
 export default function Index({ data }) {
   const [formState, setFormState] = useState();
-  const [uploadFiles, setUploadFiles] = useState();
-  const [files, setFiles] = useState({});
-
-  const handleUploadClick = e => {
-    e.preventDefault();
-    setUploadFiles(true);
-  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -54,8 +47,7 @@ export default function Index({ data }) {
       stage: e.target.stage.value,
       status: e.target.status.value,
       budget: e.target.budget.value,
-      message: e.target.message.value,
-      files
+      message: e.target.message.value
     });
     fetch("/contact", { method: "POST", body })
       .then(res => {
@@ -215,20 +207,6 @@ export default function Index({ data }) {
                     Describe what needs to be done
                   </Label>
                   <InputText id="contact-message" name="message" textArea />
-                  <Button
-                    style={{
-                      display: uploadFiles ? "none" : "inline-block"
-                    }}
-                    onClick={handleUploadClick}
-                  >
-                    Upload images
-                  </Button>
-                  <CustomDropzone
-                    style={{ display: uploadFiles ? "block" : "none" }}
-                    name="files"
-                    files={files}
-                    setFiles={setFiles}
-                  />
                   <Button type="submit" float="right">
                     {formState === "submitting" ? "Submitting..." : "Submit"}
                   </Button>
