@@ -138,6 +138,25 @@ export default function Index({ data }) {
                   <InputText id="contact-email" name="email" />
                   <Label htmlFor="contact-telephone">Telephone</Label>
                   <InputText id="contact-telephone" name="telephone" />
+                  <Label htmlFor="contact-stage">
+                    What stage of planning are you at?
+                  </Label>
+                  <Select
+                    id="contact-stage"
+                    name="stage"
+                    options={[
+                      { value: "", label: "" },
+                      { value: "ready to hire", label: "I'm ready to hire" },
+                      {
+                        value: "budgeting and planning",
+                        label: "I'm planning and budgeting"
+                      },
+                      {
+                        value: "quote for insurance",
+                        label: "I need a quote for insurance"
+                      }
+                    ]}
+                  />
                   <Label htmlFor="contact-start">
                     When would you like the job to start?
                   </Label>
@@ -147,30 +166,11 @@ export default function Index({ data }) {
                     options={[
                       { value: "", label: "" },
                       { value: "urgently", label: "Urgently" },
-                      { value: "1week", label: "Within 1 week" },
-                      { value: "2weeks", label: "Within 2 weeks" },
-                      { value: "1month", label: "Within 1 month" },
-                      { value: "2months", label: "Within 2 months" },
-                      { value: "unsure", label: "Not sure" }
-                    ]}
-                  />
-                  <Label htmlFor="contact-stage">
-                    What stage of planning are you at?
-                  </Label>
-                  <Select
-                    id="contact-stage"
-                    name="stage"
-                    options={[
-                      { value: "", label: "" },
-                      { value: "ready", label: "I'm ready to hire" },
-                      {
-                        value: "budgeting",
-                        label: "I'm planning and budgeting"
-                      },
-                      {
-                        value: "insurance",
-                        label: "I need a quote for insurance"
-                      }
+                      { value: "within 1 week", label: "Within 1 week" },
+                      { value: "within 2 weeks", label: "Within 2 weeks" },
+                      { value: "within 1 month", label: "Within 1 month" },
+                      { value: "within 2 months", label: "Within 2 months" },
+                      { value: "not sure", label: "Not sure" }
                     ]}
                   />
                   <Label htmlFor="contact-status">
@@ -184,7 +184,10 @@ export default function Index({ data }) {
                       { value: "owner", label: "I own the property" },
                       { value: "landlord", label: "I am the landlord" },
                       { value: "tenant", label: "I am a tenant" },
-                      { value: "council", label: "It's a council property" }
+                      {
+                        value: "council property",
+                        label: "It's a council property"
+                      }
                     ]}
                   />
                   <Label htmlFor="contact-budget">What is your budget?</Label>
@@ -192,15 +195,17 @@ export default function Index({ data }) {
                     id="contact-budget"
                     name="budget"
                     options={[
-                      { value: "under2000", label: "Under £2,000" },
-                      { value: "under3000", label: "Under £3,000" },
-                      { value: "under4000", label: "Under £4,000" },
-                      { value: "under5000", label: "Under £5,000" },
-                      { value: "under6000", label: "Under £6,000" },
-                      { value: "under7000", label: "Under £7,000" },
-                      { value: "under8000", label: "Under £8,000" },
-                      { value: "under9000", label: "Under £9,000" },
-                      { value: "under10000", label: "Under £10,000" }
+                      { value: "under £2,000", label: "Under £2,000" },
+                      { value: "under £3,000", label: "Under £3,000" },
+                      { value: "under £4,000", label: "Under £4,000" },
+                      { value: "under £5,000", label: "Under £5,000" },
+                      { value: "under £6,000", label: "Under £6,000" },
+                      { value: "under £7,000", label: "Under £7,000" },
+                      { value: "under £8,000", label: "Under £8,000" },
+                      { value: "under £9,000", label: "Under £9,000" },
+                      { value: "under £10,000", label: "Under £10,000" },
+                      { value: "under £15,000", label: "Under £15,000" },
+                      { value: "under £20,000", label: "Under £20,000" }
                     ]}
                   />
                   <Label htmlFor="contact-message">
