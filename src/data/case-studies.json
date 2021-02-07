@@ -1,0 +1,187 @@
+{
+  "bathrooms": [
+    {
+      "title": "Modern Bathroom",
+      "titleColor": "white",
+      "location": "Maldon, Essex",
+      "image": 0,
+      "key_features": "Damp proofing, Tiling, Alcove lighting",
+      "price": "£4,900",
+      "time_taken": "12 days",
+      "date": "December 2020",
+      "content": [
+        "This medium sized bathroom in Maldon, Essex came with very few design problems. The old bathroom was completely stripped out to a shell. The bathroom showed small signs of damp which was easily rectified with a waterproof membrane inserted within the shower walls.",
+        "The client decided to replace the old bath with a large walk-in shower. Client chose to have a false ceiling installed with spot lights and an alcove with electrics and lighting was fitted to give the bathroom a warm feeling.",
+        "We stripped out the old bathroom and disposed of all rubbish. We tiled, plastered and painted the floor and walls, installed the new bathroom with tiling, plastering, painting and all electrical works.",
+        "Total price for labour and building materials: £4,900."
+      ]
+    },
+    {
+      "title": "Compact Bathroom",
+      "titleColor": "white",
+      "location": "Hackney, London",
+      "image": 0,
+      "key_features": "Damp proofing, Recessed shower mixer",
+      "price": "£4,000",
+      "time_taken": "10 days",
+      "date": "November 2020",
+      "content": [
+        "Very small bathroom in a block of flats In Hackney, E9.",
+        "Existing bathroom was extremely old. We stripped the bathroom back to the shell and addressed damp issues.",
+        "Client went with our suggestion of using two different wall tiles.",
+        "Shower mixer was inserted in to wall to give the bathroom a modern, minimal feel.",
+        "Bathroom went from old and dated to fresh and modern.",
+        "Total price for labour and materials: £4,000."
+      ]
+    },
+    {
+      "title": "Modest Shower Room",
+      "titleColor": "dark-grey",
+      "location": "Maldon, Essex",
+      "image": 0,
+      "key_features": "Accessible shower, False ceiling with spot lights",
+      "price": "£4,300",
+      "time_taken": "10 days",
+      "date": "January 2021",
+      "content": [
+        "Medium sized bathroom for an elderly lady who had trouble getting in and out of the bath.",
+        "Complete refurbishment, bathroom was 20 years old and showed signs of damp. Completely stripped out old bathroom, disposed of all rubbish and lefy to air out with windows open for 3 days",
+        "New bathroom installed with a fresh look and easy to maintain. 4 spot lights installed in false ceiling.",
+        "Total price for labour and materials: £4,300."
+      ]
+    },
+    {
+      "title": "Period with a Modern Twist",
+      "titleColor": "white",
+      "location": "Hampstead, London",
+      "image": 0,
+      "key_features": "Period features with modern twist",
+      "price": "£7,800",
+      "time_taken": "3 weeks",
+      "date": "October 2020",
+      "content": [
+        "A complete refurbishment in a three bedroom house in Hampstead, London.",
+        "Existing bathroom was more than 20 years old. We completely stripped out the old bathroom and disposed of all rubbish.",
+        "Client went for a Victorian style with a modern twist.",
+        "Total price for labour and materials: £7,800."
+      ]
+    },
+    {
+      "title": "En-suite",
+      "titleColor": "white",
+      "location": "Chelmsford, Essex",
+      "image": 0,
+      "key_features": "Feature wall with alcove shelf",
+      "price": "£6,400",
+      "time_taken": "11 days",
+      "date": "December 2020",
+      "content": [
+        "2 bedroom flat Chelmsford. An en-suite bathroom. The existing bathroom was 10 years old and very dated.",
+        "Client went for fairly cheap products and tiles to keep within their budget.",
+        "Service included stripping out old bathroom and disposing of all rubbish, supplying and fitting everything.",
+        "Total price for labour and materials: £6,400."
+      ]
+    }
+  ],
+  "tiling": [
+    {
+      "title": "New Extension",
+      "titleColor": "dark-grey",
+      "location": "Eltham, London",
+      "image": 3,
+      "key_features": "Under floor heating",
+      "price": "£2,400",
+      "time_taken": "4 days",
+      "date": "November 2020",
+      "content": [
+        "20 square meters of floor tiles laid in a new extension.",
+        "We fitted under floor heating before laying self levelling compound.",
+        "The tiles were also grouted and sealed.",
+        "The project took 4 days to complete.",
+        "Total price for labour and materials: £2,400."
+      ]
+    },
+    {
+      "title": "Ceramic Floor Tiles",
+      "titleColor": "white",
+      "location": "Brentwood, Essex",
+      "image": 3,
+      "key_features": "Ceramic floor tiles",
+      "price": "£1,100",
+      "time_taken": "1 day",
+      "date": "December 2020",
+      "content": [
+        "The client needed 19 square meters of ceramic floor tiles fitted at short notice.",
+        "We first applied self leveling compound as the concrete floor was quite uneven. After 2 days to allow for the compound to completely dry, we returned to install the tiles.",
+        "The installation was completed in one day and the client was able to continue with the kitchen installation the following day.",
+        "The client provided the ceramic floor tiles and we provided the levelling compound, adhesive and grout.",
+        "Total price for labour and materials: £1,100."
+      ]
+    },
+    {
+      "title": "Period Floor Tiles",
+      "titleColor": "white",
+      "location": "Barnes, London",
+      "image": 0,
+      "key_features": "Period style tiles",
+      "price": "£2,100",
+      "time_taken": "5 days",
+      "date": "October 2020",
+      "content": [
+        "This room had old porcelain tiles, which we removed and disposed. We then applied self levelling compound to the floor and allowed to set for 24 hours.",
+        "All skirting and radiators were removed.",
+        "20 square meters of new tiles were laid and sealed for protection.",
+        "Total price for labour and materials: £2,100."
+      ]
+    },
+    {
+      "title": "Wood Effect Porcelain",
+      "titleColor": "white",
+      "location": "Charlton, London",
+      "image": 0,
+      "key_features": "Wood effect porcelain tiles",
+      "price": "£3,100",
+      "time_taken": "7 days",
+      "date": "October 2020",
+      "content": [
+        "Client needed old wooden floor removed. Once floor was removed 12mm concrete boards were laid to create a solid foundation.",
+        "50 square meters long porcelain tiles were laid sealed and grouted.",
+        "All rubbish was removed from site and included in the price.",
+        "We supplied all materials except tiles.",
+        "Total price for labour and materials: £3,100."
+      ]
+    },
+    {
+      "title": "Period Floor Tiles",
+      "titleColor": "white",
+      "location": "Chelsea, London",
+      "image": 0,
+      "key_features": "Under floor heating",
+      "price": "£5,600",
+      "time_taken": "2 weeks",
+      "date": "October 2020",
+      "content": [
+        "Existing floor consisted of dated tiles, client wanted to replace them and install under floor heating at the same time.",
+        "Floor and adhesive was removed and disposed.",
+        "Electric under floor heating system was installed and levelling compound applied.",
+        "54 square meters new tiles were laid, grouted and sealed.",
+        "Total price for labour and materials: £5,600."
+      ]
+    },
+    {
+      "title": "Patterned Floor Tiles",
+      "titleColor": "dark-grey",
+      "location": "Fulham, London",
+      "image": 0,
+      "key_features": "Under floor heating",
+      "price": "£4,500",
+      "time_taken": "1 week",
+      "date": "October 2020",
+      "content": [
+        "Removed old flooring and adhesive and disposed of all rubbish.",
+        "Installed electric under floor heating and laid 35 square meters of new tiles.",
+        "Total price for labour and materials: £4,500."
+      ]
+    }
+  ]
+}

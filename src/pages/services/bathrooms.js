@@ -1,14 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../../layout";
-import {
-  Card,
-  Grid,
-  Header,
-  Heading,
-  Section,
-  Text
-} from "../../../components";
+import Layout from "../../layout";
+import { Card, Grid, Header, Heading, Section, Text } from "../../components";
 
 export default function Index({ data }) {
   return (
@@ -45,41 +38,16 @@ export default function Index({ data }) {
       </Section>
       <Section heading="Case studies" variant="primary">
         <Grid columns={[1, 2, 3]} breakpoints={["25em", "50em"]}>
-          <Card
-            to="/services/bathrooms/case-study-1"
-            image={data.images.nodes[0].childImageSharp.fluid}
-            heading={<Heading el="h3">Modern Bathroom</Heading>}
-          >
-            Maldon, Essex
-          </Card>
-          <Card
-            to="/services/bathrooms/case-study-2"
-            image={data.images.nodes[1].childImageSharp.fluid}
-            heading={<Heading el="h3">Compact Bathroom</Heading>}
-          >
-            Hackney, London
-          </Card>
-          <Card
-            to="/services/bathrooms/case-study-3"
-            image={data.images.nodes[2].childImageSharp.fluid}
-            heading={<Heading el="h3">Modest Shower Room</Heading>}
-          >
-            Maldon, Essex
-          </Card>
-          <Card
-            to="/services/bathrooms/case-study-4"
-            image={data.images.nodes[3].childImageSharp.fluid}
-            heading={<Heading el="h3">Period with a Modern Twist</Heading>}
-          >
-            Hampstead, London
-          </Card>
-          <Card
-            to="/services/bathrooms/case-study-5"
-            image={data.images.nodes[4].childImageSharp.fluid}
-            heading={<Heading el="h3">En-suite</Heading>}
-          >
-            Chelmsford, Essex
-          </Card>
+          {data.caseStudies.nodes.map((cs, i) => (
+            <Card
+              key={i}
+              to={cs.path}
+              image={data.images.nodes[i].childImageSharp.fluid}
+              heading={<Heading el="h3">{cs.title}</Heading>}
+            >
+              {cs.location}
+            </Card>
+          ))}
         </Grid>
       </Section>
     </Layout>
@@ -95,8 +63,18 @@ export const query = graphql`
         }
       }
     }
+    caseStudies: allCaseStudy(
+      filter: { type: { eq: "bathrooms" } }
+      sort: { fields: path }
+    ) {
+      nodes {
+        title
+        location
+        path
+      }
+    }
     images: allFile(
-      filter: { relativePath: { regex: "/bathroom-cs(.*)a.jpg$/" } }
+      filter: { relativePath: { regex: "/bathrooms-cs(.*)a.jpg$/" } }
       sort: { fields: relativePath }
     ) {
       nodes {
