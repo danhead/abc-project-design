@@ -1,7 +1,6 @@
 export { default as Button } from "./button";
 export { default as Card } from "./card";
 export { default as Content } from "./content";
-export { default as CustomDropzone } from "./custom-dropzone";
 export { default as CustomGallery } from "./custom-gallery";
 export { default as CustomSlick } from "./custom-slick";
 export { default as Footer } from "./footer";
