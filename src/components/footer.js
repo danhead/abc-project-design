@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import { Grid, IconWithContent, Icon, Link, Text } from ".";
@@ -37,64 +38,92 @@ const Item = styled.div`
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <Container>
-      <Content>
-        <Grid columns={[1, 2]} breakpoints={["45em"]}>
-          <Cell>
-            <Item>
-              <IconWithContent>
-                <Icon color="dark" size="lg">
-                  <Phone />
-                </Icon>
-                <Link
-                  weight="bold"
-                  color="dark"
-                  size="lg"
-                  to="tel:+447539051512"
-                  noDecoration
-                >
-                  07539 051512
-                </Link>
-              </IconWithContent>
-            </Item>
-            <Item>
-              <IconWithContent>
-                <Icon color="dark" size="lg">
-                  <Phone />
-                </Icon>
-                <Link
-                  weight="bold"
-                  color="dark"
-                  size="lg"
-                  to="tel:+447378839358"
-                  noDecoration
-                >
-                  07378 839358
-                </Link>
-              </IconWithContent>
-            </Item>
-          </Cell>
-          <Cell flexEnd={"45em"}>
-            <Item>
-              <IconWithContent>
-                <Icon color="dark" size="lg">
-                  <Envelope />
-                </Icon>
-                <Link
-                  weight="bold"
-                  color="dark"
-                  size="md"
-                  to="mailto:quotations@abcprojectdesign.com"
-                  noDecoration
-                >
-                  quotations@abcprojectdesign.com
-                </Link>
-              </IconWithContent>
-            </Item>
-          </Cell>
-        </Grid>
-        <Text size="xs">&copy; {year} Abc Project Ltd</Text>
-      </Content>
-    </Container>
+    <StaticQuery
+      query={graphql`
+        query {
+          allPerson(filter: { name: { eq: "Nicholas Day" } }) {
+            nodes {
+              phone
+              altPhone
+              email
+            }
+          }
+        }
+      `}
+      render={data => {
+        const { phone, altPhone, email } = data.allPerson.nodes[0];
+        return (
+          <Container>
+            <Content>
+              <Grid columns={[1, 2]} breakpoints={["45em"]}>
+                <Cell>
+                  {phone && (
+                    <Item>
+                      <IconWithContent>
+                        <Icon color="dark" size="lg">
+                          <Phone />
+                        </Icon>
+                        <Link
+                          weight="bold"
+                          color="dark"
+                          size="lg"
+                          to={`tel:${phone
+                            .replace(/ /, "")
+                            .replace(/^0/, "+44")}`}
+                          noDecoration
+                        >
+                          {phone}
+                        </Link>
+                      </IconWithContent>
+                    </Item>
+                  )}
+                  {altPhone && (
+                    <Item>
+                      <IconWithContent>
+                        <Icon color="dark" size="lg">
+                          <Phone />
+                        </Icon>
+                        <Link
+                          weight="bold"
+                          color="dark"
+                          size="lg"
+                          to={`tel:${altPhone
+                            .replace(/ /, "")
+                            .replace(/^0/, "+44")}`}
+                          noDecoration
+                        >
+                          {altPhone}
+                        </Link>
+                      </IconWithContent>
+                    </Item>
+                  )}
+                </Cell>
+                <Cell flexEnd={"45em"}>
+                  {email && (
+                    <Item>
+                      <IconWithContent>
+                        <Icon color="dark" size="lg">
+                          <Envelope />
+                        </Icon>
+                        <Link
+                          weight="bold"
+                          color="dark"
+                          size="md"
+                          to={`mailto:${email}`}
+                          noDecoration
+                        >
+                          {email}
+                        </Link>
+                      </IconWithContent>
+                    </Item>
+                  )}
+                </Cell>
+              </Grid>
+              <Text size="xs">&copy; {year} Abc Project Ltd</Text>
+            </Content>
+          </Container>
+        );
+      }}
+    />
   );
 }
