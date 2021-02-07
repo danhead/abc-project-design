@@ -30,6 +30,7 @@ const GlobalStyles = css`
     --font-size-lg: 1.125rem; // 18px
     --font-size-xl: 1.375rem; // 22px
     --font-size-xxl: 1.625rem; // 26px
+    --icon-size-sm: 12px;
     --icon-size-md: 16px;
     --icon-size-lg: 24px;
 

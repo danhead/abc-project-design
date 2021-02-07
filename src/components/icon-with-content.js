@@ -5,7 +5,6 @@ import { Icon } from "./";
 const Container = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: var(--spacing-y-sm);
 `;
 
 const IconWrapper = styled.div`

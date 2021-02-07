@@ -16,12 +16,13 @@ import {
   Map,
   Section,
   Select,
+  Team,
   Text
 } from "../components";
-import CheckCircle from "../icons/check-circle.svg";
-import Envelope from "../icons/envelope.svg";
-import Phone from "../icons/phone.svg";
-import Team from "../icons/team.svg";
+import CheckCircleIcon from "../icons/check-circle.svg";
+import EnvelopeIcon from "../icons/envelope.svg";
+import PhoneIcon from "../icons/phone.svg";
+import TeamIcon from "../icons/team.svg";
 
 const encode = data => {
   const formData = new FormData();
@@ -86,7 +87,7 @@ export default function Index({ data }) {
               <>
                 <IconWithContent>
                   <Icon color="dark" size="lg">
-                    <CheckCircle />
+                    <CheckCircleIcon />
                   </Icon>
                   <Text color="dark" size="lg">
                     Thank you for contacting us!
@@ -102,7 +103,7 @@ export default function Index({ data }) {
                 {formState === "submitting" && <Interrupt />}
                 <IconWithContent>
                   <Icon color="dark" size="lg">
-                    <Envelope />
+                    <EnvelopeIcon />
                   </Icon>
                   <Text color="dark" size="lg">
                     Contact us
@@ -222,102 +223,13 @@ export default function Index({ data }) {
           <div>
             <IconWithContent>
               <Icon color="dark" size="lg">
-                <Team />
+                <TeamIcon />
               </Icon>
               <Text color="dark" size="lg">
                 The team
               </Text>
             </IconWithContent>
-            <ul>
-              <li>
-                <Text>
-                  <Link to="mailto:quotations@abcprojectdesign.com">
-                    Nicholas Day
-                  </Link>{" "}
-                  &ndash; <em>Sales and Marketing Manager</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:daniel.costea@abcprojectdesign.com">
-                    Daniel Costea
-                  </Link>{" "}
-                  &ndash; <em>Project Director</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:maria.antonia@abcprojectdesign.com">
-                    Maria Antonia
-                  </Link>{" "}
-                  &ndash; <em>Design and Consultation Manager</em>
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Link to="mailto:harry.jackson@abcprojectdesign.com">
-                    Harry Jackson
-                  </Link>{" "}
-                  &ndash; <em>After Sales Manager</em>
-                </Text>
-              </li>
-            </ul>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="lg"
-                to="tel:+447539051512"
-                noDecoration
-              >
-                07539 051512
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="lg"
-                to="tel:+447378839358"
-                noDecoration
-              >
-                07378 839358
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="lg"
-                to="tel:+441708938455"
-                noDecoration
-              >
-                01708 938455
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Envelope />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="md"
-                to="mailto:quotations@abcprojectdesign.com"
-                noDecoration
-              >
-                quotations@abcprojectdesign.com
-              </Link>
-            </IconWithContent>
+            <Team team={data.allPerson.nodes} />
           </div>
         </Grid>
       </Section>
@@ -352,6 +264,15 @@ export const query = graphql`
         fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+    allPerson {
+      nodes {
+        name
+        email
+        phone
+        altPhone
+        title
       }
     }
   }

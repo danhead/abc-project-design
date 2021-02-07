@@ -30,6 +30,10 @@ const Cell = styled.div`
     `}
 `;
 
+const Item = styled.div`
+  margin-bottom: var(--spacing-y-sm);
+`;
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -37,50 +41,56 @@ export default function Footer() {
       <Content>
         <Grid columns={[1, 2]} breakpoints={["45em"]}>
           <Cell>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="lg"
-                to="tel:+447539051512"
-                noDecoration
-              >
-                07539 051512
-              </Link>
-            </IconWithContent>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Phone />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="lg"
-                to="tel:+447378839358"
-                noDecoration
-              >
-                07378 839358
-              </Link>
-            </IconWithContent>
+            <Item>
+              <IconWithContent>
+                <Icon color="dark" size="lg">
+                  <Phone />
+                </Icon>
+                <Link
+                  weight="bold"
+                  color="dark"
+                  size="lg"
+                  to="tel:+447539051512"
+                  noDecoration
+                >
+                  07539 051512
+                </Link>
+              </IconWithContent>
+            </Item>
+            <Item>
+              <IconWithContent>
+                <Icon color="dark" size="lg">
+                  <Phone />
+                </Icon>
+                <Link
+                  weight="bold"
+                  color="dark"
+                  size="lg"
+                  to="tel:+447378839358"
+                  noDecoration
+                >
+                  07378 839358
+                </Link>
+              </IconWithContent>
+            </Item>
           </Cell>
           <Cell flexEnd={"45em"}>
-            <IconWithContent>
-              <Icon color="dark" size="lg">
-                <Envelope />
-              </Icon>
-              <Link
-                weight="bold"
-                color="dark"
-                size="md"
-                to="mailto:quotations@abcprojectdesign.com"
-                noDecoration
-              >
-                quotations@abcprojectdesign.com
-              </Link>
-            </IconWithContent>
+            <Item>
+              <IconWithContent>
+                <Icon color="dark" size="lg">
+                  <Envelope />
+                </Icon>
+                <Link
+                  weight="bold"
+                  color="dark"
+                  size="md"
+                  to="mailto:quotations@abcprojectdesign.com"
+                  noDecoration
+                >
+                  quotations@abcprojectdesign.com
+                </Link>
+              </IconWithContent>
+            </Item>
           </Cell>
         </Grid>
         <Text size="xs">&copy; {year} Abc Project Ltd</Text>

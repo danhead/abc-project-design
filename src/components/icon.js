@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const Container = styled.span`
-  display: inline-block;
+  display: inline-flex;
   width: ${props => `var(--icon-size-${props.size})`};
   height: ${props => `var(--icon-size-${props.size})`};
   ${props =>
