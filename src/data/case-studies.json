@@ -96,6 +96,22 @@
         "We also tiled the room with metro style tiles for a modern look.",
         "Total price for labour and materials: £3,250."
       ]
+    },
+    {
+      "title": "Marble Effect Tiling",
+      "titleColor": "dark-grey",
+      "location": "Harold Wood, Essex",
+      "image": 0,
+      "key_features": "Shower mixer, Spot lights, Tiled walls and bath panel",
+      "price": "£3,500",
+      "time_taken": "6 days",
+      "date": "February 2021",
+      "content": [
+        "The old bathroom was stripped out and all rubbish removed.",
+        "The walls were tiled with marble effect tiles and new spot lights were installed in the ceiling.",
+        "The new bathroom was then installed, including a new shower mixer and towel radiator plumbed in to the wall.",
+        "Total price for labour and materials: £3,500."
+      ]
     }
   ],
   "tiling": [
