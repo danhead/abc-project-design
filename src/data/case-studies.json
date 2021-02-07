@@ -81,6 +81,21 @@
         "Service included stripping out old bathroom and disposing of all rubbish, supplying and fitting everything.",
         "Total price for labour and materials: £6,400."
       ]
+    },
+    {
+      "title": "Metro style washroom",
+      "titleColor": "dark-grey",
+      "location": "Ilford, London",
+      "image": 0,
+      "key_features": "Metro tiles",
+      "price": "£3,250",
+      "time_taken": "5 days",
+      "date": "February 2021",
+      "content": [
+        "For this modest sized washroom, we stripped out the existing facilities and disposed of all rubbish, supplied and fitted a new toilet, sink and radiator.",
+        "We also tiled the room with metro style tiles for a modern look.",
+        "Total price for labour and materials: £3,250."
+      ]
     }
   ],
   "tiling": [
