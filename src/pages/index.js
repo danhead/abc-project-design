@@ -114,7 +114,7 @@ export default function Index({ data }) {
       </Section>
       <Section variant="primary" heading="What our clients think of us">
         <CustomSlick>
-          {data.site.siteMetadata.reviews.map((review, i) => (
+          {data.allReview.nodes.map((review, i) => (
             <ReviewSummary key={i} review={review} />
           ))}
         </CustomSlick>
@@ -179,15 +179,13 @@ export const query = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        reviews {
-          name
-          title
-          text
-          author
-          date
-        }
+    allReview {
+      nodes {
+        author
+        date
+        name
+        text
+        title
       }
     }
   }

@@ -1,7 +1,24 @@
 const { resolve } = require("path");
+const reviews = require("./src/data/reviews.json");
 const caseStudies = require("./src/data/case-studies.json");
 
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+  reviews.reviews.forEach((review, i) => {
+    const { name, title, text, author, date } = review;
+    const node = {
+      name,
+      title,
+      text,
+      author,
+      date,
+      id: createNodeId(`review-${i}`),
+      internal: {
+        type: "review",
+        contentDigest: createContentDigest(review)
+      }
+    };
+    actions.createNode(node);
+  });
   Object.keys(caseStudies).forEach(key => {
     caseStudies[key].forEach((cs, i) => {
       const {
