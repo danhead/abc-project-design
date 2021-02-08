@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { Text } from ".";
 import RatedPeople from "../icons/rated-people.svg";
 import Bark from "../icons/bark.svg";
+import Checkatrade from "../icons/checkatrade-logo.svg";
 import QuoteLeft from "../icons/quote-left.svg";
 import QuoteRight from "../icons/quote-right.svg";
 import Pen from "../icons/pen.svg";
@@ -10,6 +11,7 @@ import Calendar from "../icons/calendar.svg";
 
 const ICONS = {
   Bark: <Bark />,
+  Checkatrade: <Checkatrade />,
   "Rated People": <RatedPeople />
 };
 
