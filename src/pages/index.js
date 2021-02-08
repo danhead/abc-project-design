@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import styled from "@emotion/styled";
 import Layout from "../layout";
 import {
+  Button,
   Card,
   CustomSlick,
   Grid,
@@ -62,7 +63,23 @@ export default function Index({ data }) {
           </Card>
         </Grid>
       </Section>
-      <Section variant="secondary" heading="All of our work is guaranteed!">
+      <Section variant="primary" heading="Products">
+        <Grid columns={[1, 2]}>
+          <div>
+            <Img fluid={data.vpImage.childImageSharp.fluid} />
+          </div>
+          <div>
+            <Text>
+              Victorian Plumbing is a leading retailer of bathrooms online and
+              our preferred supplier of bathroom suites.
+            </Text>
+            <Button to="https://www.victorianplumbing.co.uk/bathroom-suites">
+              View products
+            </Button>
+          </div>
+        </Grid>
+      </Section>
+      <Section heading="All of our work is guaranteed!">
         <Text align="center">
           If you are looking for a one-stop shop for your new bathroom, look no
           further. We can take care of all jobs required to complete your new
@@ -172,6 +189,13 @@ export const query = graphql`
         }
       }
     }
+    vpImage: file(relativePath: { eq: "victorian_plumbing_logo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 320, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     barkImage: file(relativePath: { eq: "bark_logo.png" }) {
       childImageSharp {
         fixed(width: 106, height: 32, quality: 100) {
@@ -181,11 +205,11 @@ export const query = graphql`
     }
     allReview {
       nodes {
+        name
+        title
+        text
         author
         date
-        name
-        text
-        title
       }
     }
   }
