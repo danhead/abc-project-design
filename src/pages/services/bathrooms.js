@@ -74,7 +74,9 @@ export const query = graphql`
       }
     }
     images: allFile(
-      filter: { relativePath: { regex: "/bathrooms-cs(.*)a.jpg$/" } }
+      filter: {
+        relativePath: { regex: "/bathrooms-cs(1a|2a|3a|4a|5a|6a|7a|8c).jpg$/" }
+      }
       sort: { fields: relativePath }
     ) {
       nodes {

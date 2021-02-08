@@ -112,6 +112,22 @@
         "The new bathroom was then installed, including a new shower mixer and towel radiator plumbed in to the wall.",
         "Total price for labour and materials: £3,500."
       ]
+    },
+    {
+      "title": "Shower Room",
+      "titleColor": "dark-grey",
+      "location": "Brentwood, Essex",
+      "image": 2,
+      "key_features": "Skylight feature",
+      "price": "£4,400",
+      "time_taken": "9 days",
+      "date": "February 2021",
+      "content": [
+        "The old bathroom was stripped out and all rubbish removed.",
+        "Once empty, we treated the room for damp.",
+        "Room was tiled and painted before the new bathroom suite was installed.",
+        "Total price for labour and materials: £4,400."
+      ]
     }
   ],
   "tiling": [
