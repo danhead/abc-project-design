@@ -7,7 +7,10 @@ const Media = styled.div`
   transition: transform 0.15s ease-in;
 `;
 const Heading = styled.div``;
-const Body = styled.div``;
+const Body = styled.div`
+  visibility: hidden;
+  transition: visibility 1ms linear 0.15s;
+`;
 
 const Content = styled.div`
   position: absolute;
@@ -37,6 +40,10 @@ const Container = styled.div`
     }
     &:hover ${Media} {
       transform: scale(1.05);
+    }
+    &:hover ${Body} {
+      visibility: visible;
+      transition: none;
     }
   }
 `;
