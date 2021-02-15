@@ -140,21 +140,30 @@ export default function Index({ data }) {
         </Heading>
         <Grid columns={[1, 3]} breakpoints={["45em"]}>
           <LogoItem>
-            <Link to="https://www.bark.com/en/gb/company/abc-project-design-ltd/alJKp">
+            <Link
+              to="https://www.bark.com/en/gb/company/abc-project-design-ltd/alJKp"
+              aria-label="Bark"
+            >
               <Logo>
                 <Img fixed={data.barkImage.childImageSharp.fixed} />
               </Logo>
             </Link>
           </LogoItem>
           <LogoItem>
-            <Link to="https://www.checkatrade.com/trades/AbcProject/reviews">
+            <Link
+              to="https://www.checkatrade.com/trades/AbcProject/reviews"
+              aria-label="Checkatrade"
+            >
               <Logo>
                 <Checkatrade />
               </Logo>
             </Link>
           </LogoItem>
           <LogoItem>
-            <Link to="https://www.ratedpeople.com/profile/ciprian-jitariuc#ratings">
+            <Link
+              to="https://www.ratedpeople.com/profile/ciprian-jitariuc#ratings"
+              aria-label="Rated People"
+            >
               <Logo>
                 <RatedPeople />
               </Logo>

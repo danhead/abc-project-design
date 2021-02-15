@@ -124,7 +124,7 @@ export default function Nav({ location, data, open, setOpen }) {
                 subNav={link.subNav}
                 to={link.to}
                 location={location}
-                active={location === link.to}
+                active={location === link.to ? "true" : "false"}
                 partiallyActive={
                   link.subNav && location && location.indexOf(link.to) === 0
                 }
