@@ -102,21 +102,3 @@ export const query = graphql`
     }
   }
 `;
-/*
-    images: allFile
-      filter: { relativePath: { regex: $images } }
-      sort: { fields: relativePath }
-    ) {
-      nodes {
-        childImageSharp {
-          thumb: fluid(maxWidth: 256, maxHeight: 256, quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-          full: fluid(maxWidth: 1280, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  }
-`;*/

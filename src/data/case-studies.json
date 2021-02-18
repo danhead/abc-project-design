@@ -134,6 +134,41 @@
         "Total price for labour and materials: £4,400.",
         "(This does not include bathroom suite or tiles)"
       ]
+    },
+    {
+      "title": "Mosaic Tiling",
+      "titleColor": "white",
+      "location": "Brentwood, Essex",
+      "image": 12,
+      "key_features": "Electric alcove, Mosaic tiling, Under floor heating",
+      "price": "£5,500",
+      "time_taken": "12 days",
+      "date": "November 2020",
+      "content": [
+        "Completely strip out old bathroom and dispose of all rubbish.",
+        "Relocate soil pipe to install toilet in new location.",
+        "Fitted electric under floor heating.",
+        "Installed mosaic wall tiles.",
+        "Total price for labour and materials: £5,500.",
+        "(This does not include bathroom suite or tiles)"
+      ]
+    },
+    {
+      "title": "Victorian Look",
+      "titleColor": "dark-grey",
+      "location": "Fulham, London",
+      "image": 3,
+      "key_features": "Walk in shower, Victorian style tiling",
+      "price": "£4,500",
+      "time_taken": "10 days",
+      "date": "February 2021",
+      "content": [
+        "Stripped out old bathroom and disposed of all rubbish.",
+        "Tiled wall and floor with Victorian style tiling",
+        "Recessed plumbing for wall mounted shower unit",
+        "Total price for labour and materials: £5,500.",
+        "(This does not include bathroom suite or tiles)"
+      ]
     }
   ],
   "tiling": [

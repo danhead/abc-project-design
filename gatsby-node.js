@@ -3,6 +3,8 @@ const reviews = require("./src/data/reviews.json");
 const caseStudies = require("./src/data/case-studies.json");
 const team = require("./src/data/team.json");
 
+const padZero = n => (n < 10 ? `0${n}` : n);
+
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   team.team.forEach(person => {
     const { name, email, phone, altPhone, title } = person;
@@ -50,6 +52,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         content
       } = cs;
       const node = {
+        index: i,
         path: `/services/${key}/case-study-${i + 1}`,
         type: key,
         title,
@@ -83,7 +86,7 @@ exports.createPages = async ({ actions }) => {
         component: template,
         context: {
           pagePath: path,
-          images: `/${key}-cs${i + 1}(.*).jpg$/`
+          images: `/${key}-cs${padZero(i + 1)}(.*).jpg$/`
         }
       });
     });

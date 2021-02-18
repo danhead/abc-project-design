@@ -50,7 +50,7 @@ export const query = graphql`
     }
     caseStudies: allCaseStudy(
       filter: { type: { eq: "tiling" } }
-      sort: { fields: path }
+      sort: { fields: index }
     ) {
       nodes {
         title
@@ -59,7 +59,9 @@ export const query = graphql`
       }
     }
     images: allFile(
-      filter: { relativePath: { regex: "/tiling-cs(1d|2e|3a|4a|5a|6a).jpg$/" } }
+      filter: {
+        relativePath: { regex: "/tiling-cs(01d|02e|03a|04a|05a|06a).jpg$/" }
+      }
       sort: { fields: relativePath }
     ) {
       nodes {

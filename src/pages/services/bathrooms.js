@@ -65,7 +65,7 @@ export const query = graphql`
     }
     caseStudies: allCaseStudy(
       filter: { type: { eq: "bathrooms" } }
-      sort: { fields: path }
+      sort: { fields: index }
     ) {
       nodes {
         title
@@ -75,7 +75,9 @@ export const query = graphql`
     }
     images: allFile(
       filter: {
-        relativePath: { regex: "/bathrooms-cs(1a|2a|3a|4a|5a|6a|7a|8j).jpg$/" }
+        relativePath: {
+          regex: "/bathrooms-cs(01a|02a|03a|04a|05a|06a|07a|08j|09m|10d).jpg$/"
+        }
       }
       sort: { fields: relativePath }
     ) {
