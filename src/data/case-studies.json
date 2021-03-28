@@ -164,10 +164,27 @@
       "date": "February 2021",
       "content": [
         "Stripped out old bathroom and disposed of all rubbish.",
-        "Tiled wall and floor with Victorian style tiling",
-        "Recessed plumbing for wall mounted shower unit",
+        "Tiled wall and floor with Victorian style tiling.",
+        "Recessed plumbing for wall mounted shower unit.",
         "Total price for labour and materials: £4,500.",
         "(This does not include bathroom suite or tiles)"
+      ]
+    },
+    {
+      "title": "Two bathrooms",
+      "titleColor": "white",
+      "location": "Ware, Hertfordshire",
+      "image": 11,
+      "key_features": "Free standing baths, Wall hung toilets, Spot lights",
+      "price": "£16,000 for both bathrooms",
+      "time_taken": "3 weeks",
+      "date": "March 2021",
+      "content": [
+        "Stripped out old bathrooms and disposed of all rubbish.",
+        "Tiled both rooms and installed recessed spot lights.",
+        "Fitted free standing baths and wall mounted toilet basins.",
+        "Total price for labour and materials: £16,000.",
+        "(This does not include bathroom suites or tiles)"
       ]
     }
   ],

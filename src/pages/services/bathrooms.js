@@ -76,7 +76,7 @@ export const query = graphql`
     images: allFile(
       filter: {
         relativePath: {
-          regex: "/bathrooms-cs(01a|02a|03a|04a|05a|06a|07a|08j|09m|10d).jpg$/"
+          regex: "/bathrooms-cs(01a|02a|03a|04a|05a|06a|07a|08j|09m|10d|11o).jpg$/"
         }
       }
       sort: { fields: relativePath }
