@@ -18,7 +18,6 @@ import {
   Tile
 } from "../components";
 import Calendar from "../icons/calendar.svg";
-import Checkatrade from "../icons/checkatrade.svg";
 import CheckCircle from "../icons/check-circle.svg";
 import Hammer from "../icons/hammer.svg";
 import Pound from "../icons/pound.svg";
@@ -138,7 +137,7 @@ export default function Index({ data }) {
         <Heading el="h3" align="center">
           See all of our reviews
         </Heading>
-        <Grid columns={[1, 3]} breakpoints={["45em"]}>
+        <Grid columns={[1, 2]} breakpoints={["30em"]}>
           <LogoItem>
             <Link
               to="https://www.bark.com/en/gb/company/abc-project-design-ltd/alJKp"
@@ -146,16 +145,6 @@ export default function Index({ data }) {
             >
               <Logo>
                 <Img fixed={data.barkImage.childImageSharp.fixed} />
-              </Logo>
-            </Link>
-          </LogoItem>
-          <LogoItem>
-            <Link
-              to="https://www.checkatrade.com/trades/AbcProject/reviews"
-              aria-label="Checkatrade"
-            >
-              <Logo>
-                <Checkatrade />
               </Logo>
             </Link>
           </LogoItem>

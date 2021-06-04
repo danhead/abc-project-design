@@ -21,7 +21,6 @@ import {
 } from "../components";
 import CheckCircleIcon from "../icons/check-circle.svg";
 import EnvelopeIcon from "../icons/envelope.svg";
-import PhoneIcon from "../icons/phone.svg";
 import TeamIcon from "../icons/team.svg";
 
 const encode = data => {

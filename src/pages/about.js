@@ -34,9 +34,9 @@ export default function Index({ data }) {
         </Text>
         <Text>
           Customer satisfaction is of paramount importance to us this and is
-          reflected in our many five star reviews on Checkatrade, Rated People
-          and Bark. We strive to maximise our relationship with our customers by
-          being honest and fair.
+          reflected in our many five star reviews on Rated People and Bark. We
+          strive to maximise our relationship with our customers by being honest
+          and fair.
         </Text>
         <Text>
           We are fully insured and all work undertaken is guaranteed. Pricing is
