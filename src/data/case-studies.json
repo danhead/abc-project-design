@@ -186,6 +186,21 @@
         "Total price for labour and materials: £17,000.",
         "(This does not include bathroom suites or tiles)"
       ]
+    },
+    {
+      "title": "Modern Bathroom",
+      "titleColor": "dark-grey",
+      "location": "Fulham, London",
+      "image": 5,
+      "key_features": "Shower, bath, vanity unit and toilet",
+      "price": "£8,650",
+      "time_taken": "3 weeks",
+      "date": "November 2021",
+      "content": [
+        "Stripped out old bathrooms and disposed of all rubbish.",
+        "Total price for labour and materials: £8,650.",
+        "(This does not include bathroom suites or tiles)"
+      ]
     }
   ],
   "tiling": [
