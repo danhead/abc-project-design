@@ -17,15 +17,15 @@ import {
   Section,
   Select,
   Team,
-  Text
+  Text,
 } from "../components";
 import CheckCircleIcon from "../icons/check-circle.svg";
 import EnvelopeIcon from "../icons/envelope.svg";
 import TeamIcon from "../icons/team.svg";
 
-const encode = data => {
+const encode = (data) => {
   const formData = new FormData();
-  Object.keys(data).forEach(k => {
+  Object.keys(data).forEach((k) => {
     formData.append(k, data[k]);
   });
   return formData;
@@ -34,7 +34,7 @@ const encode = data => {
 export default function Index({ data }) {
   const [formState, setFormState] = useState();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setFormState("submitting");
     const body = encode({
@@ -46,10 +46,10 @@ export default function Index({ data }) {
       stage: e.target.stage.value,
       status: e.target.status.value,
       budget: e.target.budget.value,
-      message: e.target.message.value
+      message: e.target.message.value,
     });
     fetch("/contact", { method: "POST", body })
-      .then(res => {
+      .then((res) => {
         if (res.status !== 200) {
           setFormState("error");
         } else {
@@ -127,7 +127,7 @@ export default function Index({ data }) {
                   name="contact"
                   method="POST"
                   action="/contact"
-                  onSubmit={e => handleSubmit(e, scroll)}
+                  onSubmit={(e) => handleSubmit(e, scroll)}
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                 >
@@ -149,12 +149,12 @@ export default function Index({ data }) {
                       { value: "ready to hire", label: "I'm ready to hire" },
                       {
                         value: "budgeting and planning",
-                        label: "I'm planning and budgeting"
+                        label: "I'm planning and budgeting",
                       },
                       {
                         value: "quote for insurance",
-                        label: "I need a quote for insurance"
-                      }
+                        label: "I need a quote for insurance",
+                      },
                     ]}
                   />
                   <Label htmlFor="contact-start">
@@ -170,7 +170,7 @@ export default function Index({ data }) {
                       { value: "within 2 weeks", label: "Within 2 weeks" },
                       { value: "within 1 month", label: "Within 1 month" },
                       { value: "within 2 months", label: "Within 2 months" },
-                      { value: "not sure", label: "Not sure" }
+                      { value: "not sure", label: "Not sure" },
                     ]}
                   />
                   <Label htmlFor="contact-status">
@@ -186,8 +186,8 @@ export default function Index({ data }) {
                       { value: "tenant", label: "I am a tenant" },
                       {
                         value: "council property",
-                        label: "It's a council property"
-                      }
+                        label: "It's a council property",
+                      },
                     ]}
                   />
                   <Label htmlFor="contact-budget">What is your budget?</Label>
@@ -205,7 +205,7 @@ export default function Index({ data }) {
                       { value: "under £9,000", label: "Under £9,000" },
                       { value: "under £10,000", label: "Under £10,000" },
                       { value: "under £15,000", label: "Under £15,000" },
-                      { value: "under £20,000", label: "Under £20,000" }
+                      { value: "under £20,000", label: "Under £20,000" },
                     ]}
                   />
                   <Label htmlFor="contact-message">
@@ -235,7 +235,7 @@ export default function Index({ data }) {
       <Map
         initialCenter={{
           lat: 51.5614,
-          lng: 0.1071
+          lng: 0.1071,
         }}
         zoom={10}
         scrollwheel={false}
@@ -270,7 +270,6 @@ export const query = graphql`
         name
         email
         phone
-        altPhone
         title
       }
     }

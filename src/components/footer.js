@@ -22,7 +22,7 @@ const Content = styled.div`
 const Cell = styled.div`
   display: flex;
   flex-direction: column;
-  ${props =>
+  ${(props) =>
     props.flexEnd &&
     css`
       @media (min-width: ${props.flexEnd}) {
@@ -41,17 +41,15 @@ export default function Footer() {
     <StaticQuery
       query={graphql`
         query {
-          allPerson(filter: { name: { eq: "Nicholas Day" } }) {
+          allPerson(filter: { name: { eq: "Daniel Costea" } }) {
             nodes {
               phone
-              altPhone
-              email
             }
           }
         }
       `}
-      render={data => {
-        const { phone, altPhone, email } = data.allPerson.nodes[0];
+      render={(data) => {
+        const { phone } = data.allPerson.nodes[0];
         return (
           <Container>
             <Content>
@@ -77,46 +75,24 @@ export default function Footer() {
                       </IconWithContent>
                     </Item>
                   )}
-                  {altPhone && (
-                    <Item>
-                      <IconWithContent>
-                        <Icon color="dark" size="lg">
-                          <Phone />
-                        </Icon>
-                        <Link
-                          weight="bold"
-                          color="dark"
-                          size="lg"
-                          to={`tel:${altPhone
-                            .replace(/ /, "")
-                            .replace(/^0/, "+44")}`}
-                          noDecoration
-                        >
-                          {altPhone}
-                        </Link>
-                      </IconWithContent>
-                    </Item>
-                  )}
                 </Cell>
                 <Cell flexEnd={"45em"}>
-                  {email && (
-                    <Item>
-                      <IconWithContent>
-                        <Icon color="dark" size="lg">
-                          <Envelope />
-                        </Icon>
-                        <Link
-                          weight="bold"
-                          color="dark"
-                          size="md"
-                          to={`mailto:${email}`}
-                          noDecoration
-                        >
-                          {email}
-                        </Link>
-                      </IconWithContent>
-                    </Item>
-                  )}
+                  <Item>
+                    <IconWithContent>
+                      <Icon color="dark" size="lg">
+                        <Envelope />
+                      </Icon>
+                      <Link
+                        weight="bold"
+                        color="dark"
+                        size="md"
+                        to="mailto:quotations@abcprojectdesign.com"
+                        noDecoration
+                      >
+                        quotations@abcprojectdesign.com
+                      </Link>
+                    </IconWithContent>
+                  </Item>
                 </Cell>
               </Grid>
               <Text size="xs">&copy; {year} Abc Project Ltd</Text>
