@@ -23,6 +23,6 @@ export { default as ReviewSummary } from "./review-summary";
 export { default as Section } from "./section";
 export { default as Select } from "./select";
 export { default as Table } from "./table";
-export { default as Team } from './team';
+export { default as Team } from "./team";
 export { default as Text } from "./text";
 export { default as Tile } from "./tile";

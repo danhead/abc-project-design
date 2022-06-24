@@ -27,7 +27,7 @@ const Top = styled.div`
     fill: var(--color-secondary);
   }
 
-  ${props =>
+  ${(props) =>
     props.visible &&
     css`
       filter: none;
@@ -39,7 +39,7 @@ const Top = styled.div`
 const Middle = styled.div`
   opacity: 0;
   transition: opacity 0.5s ease-in 0.75s;
-  ${props =>
+  ${(props) =>
     props.visible &&
     css`
       opacity: 1;
@@ -63,7 +63,7 @@ const Bottom = styled.div`
     fill: var(--color-secondary);
   }
 
-  ${props =>
+  ${(props) =>
     props.visible &&
     css`
       filter: none;

@@ -21,7 +21,7 @@ const Content = styled.div`
 export default function IconWithContent({ children }) {
   return (
     <Container>
-      {children.map(child => {
+      {children.map((child) => {
         if (child.type === Icon) {
           return <IconWrapper key="icon">{child}</IconWrapper>;
         }

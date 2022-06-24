@@ -23,7 +23,7 @@ export default function InputText({
   value,
   onChange,
   required,
-  textArea
+  textArea,
 }) {
   return (
     <Input

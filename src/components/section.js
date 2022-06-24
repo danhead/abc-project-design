@@ -4,10 +4,10 @@ import { Heading } from ".";
 
 const Container = styled.div`
   padding: var(--spacing-y-lg) var(--spacing-x-sm);
-  ${props => !props.variant && `background-color: var(--color-white);`}
-  ${props =>
+  ${(props) => !props.variant && `background-color: var(--color-white);`}
+  ${(props) =>
     props.variant === "primary" && `background-color: var(--color-light);`}
-  ${props =>
+  ${(props) =>
     props.variant === "transparent" &&
     `background-color: var(--color-semi-transparent);`}
 `;
@@ -25,7 +25,7 @@ export default function Section({
   heading,
   headingElement = "h2",
   children,
-  variant
+  variant,
 }) {
   return (
     <Container variant={variant}>

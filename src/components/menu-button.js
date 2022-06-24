@@ -35,7 +35,7 @@ const Bar = styled.span`
 
 const TopBar = styled(Bar)`
   top: 5px;
-  transform: ${props =>
+  transform: ${(props) =>
     props.open
       ? `translate3d(0, 10px, 0) rotate(50deg)`
       : `translate3d(0, 0, 0) rotate(0)`};
@@ -44,13 +44,13 @@ const TopBar = styled(Bar)`
 
 const MiddleBar = styled(Bar)`
   top: 15px;
-  opacity: ${props => (props.open ? 0 : 1)};
+  opacity: ${(props) => (props.open ? 0 : 1)};
   transition: opacity 1s ease-in;
 `;
 
 const BottomBar = styled(Bar)`
   top: 25px;
-  transform: ${props =>
+  transform: ${(props) =>
     props.open
       ? `translate3d(0, -10px, 0) rotate(-410deg)`
       : `translate3d(0, 0, 0) rotate(0)`};

@@ -27,7 +27,7 @@ export default function CustomMap({ ...other }) {
   `);
 
   const Wrapper = GoogleApiWrapper({
-    apiKey: data.site.siteMetadata.secrets.GMAPS_APIKEY
+    apiKey: data.site.siteMetadata.secrets.GMAPS_APIKEY,
   })(MapContainer);
   return <Wrapper {...other} />;
 }

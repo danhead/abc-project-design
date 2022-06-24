@@ -13,7 +13,7 @@ const Container = styled.button`
   text-decoration: none;
   cursor: pointer;
 
-  ${props =>
+  ${(props) =>
     props.float &&
     css`
       float: ${props.float};

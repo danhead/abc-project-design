@@ -12,7 +12,7 @@ import Calendar from "../icons/calendar.svg";
 const ICONS = {
   Bark: <Bark />,
   Checkatrade: <Checkatrade />,
-  "Rated People": <RatedPeople />
+  "Rated People": <RatedPeople />,
 };
 
 const Container = styled.div`

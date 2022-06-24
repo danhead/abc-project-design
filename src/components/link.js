@@ -4,13 +4,13 @@ import { css } from "@emotion/react";
 import { Link as GatsbyLink } from "gatsby";
 
 const StyledLink = styled.a`
-  ${props =>
+  ${(props) =>
     props.size &&
     css`
       font-size: var(--font-size-${props.size});
     `}
   color: var(--color-dark);
-  ${props =>
+  ${(props) =>
     props.noDecoration
       ? css`
           text-decoration: none;
@@ -20,7 +20,7 @@ const StyledLink = styled.a`
           text-decoration-thickness: 2px;
           text-underline-offset: 3px;
         `}
-  ${props =>
+  ${(props) =>
     props.weight &&
     css`
       font-weight: ${props.weight};

@@ -4,9 +4,9 @@ import { css } from "@emotion/react";
 
 const Container = styled.span`
   display: inline-flex;
-  width: ${props => `var(--icon-size-${props.size})`};
-  height: ${props => `var(--icon-size-${props.size})`};
-  ${props =>
+  width: ${(props) => `var(--icon-size-${props.size})`};
+  height: ${(props) => `var(--icon-size-${props.size})`};
+  ${(props) =>
     props.color &&
     css`
       color: var(--color-${props.color});

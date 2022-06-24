@@ -11,10 +11,10 @@ const Container = styled.div`
   bottom: 0;
   left: 0;
   z-index: 6;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.open ? `rgba(0, 0, 0, 0.8)` : `rgba(0, 0, 0, 0.4)`};
   backdrop-filter: blur(2px);
-  transform: ${props =>
+  transform: ${(props) =>
     props.open
       ? `translate3d(0, 0, 0)`
       : `translate3d(0, calc(-100% + 40px), 0)`};
@@ -51,7 +51,7 @@ const Heading = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  opacity: ${props => (props.hidden ? 0 : 1)};
+  opacity: ${(props) => (props.hidden ? 0 : 1)};
   transform: opacity 0.3s ease-in;
 
   svg {

@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 const Button = styled.button`
   position: absolute;
   top: 50%;
-  ${props =>
+  ${(props) =>
     props.variant === "right" &&
     css`
       right: 0;
@@ -61,7 +61,7 @@ export default function CustomSlick({ children }) {
     speed: 500,
     autoplaySpeed: 10000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
   useEffect(() => {
     slick.current.slickPlay();

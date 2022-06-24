@@ -25,7 +25,7 @@ const Link = styled(GatsbyLink)`
     margin: 0 var(--spacing-x-xs);
     padding: 9px 0;
     border-bottom: 2px solid
-      ${props =>
+      ${(props) =>
         props.active === "true" || props.partiallyActive
           ? `var(--color-white)`
           : `transparent`};

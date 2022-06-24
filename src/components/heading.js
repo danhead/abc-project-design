@@ -3,20 +3,21 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const Styles = styled.h1`
-  margin: ${props => (props.noMargin ? 0 : `0 0 var(--spacing-y-sm)`)};
-  font-size: ${props => `var(--font-size-${props.size})`};
-  text-shadow: 0 0 ${props => props.shadowSize} ${props => props.shadowColor};
-  ${props =>
+  margin: ${(props) => (props.noMargin ? 0 : `0 0 var(--spacing-y-sm)`)};
+  font-size: ${(props) => `var(--font-size-${props.size})`};
+  text-shadow: 0 0 ${(props) => props.shadowSize}
+    ${(props) => props.shadowColor};
+  ${(props) =>
     props.color &&
     css`
       color: var(--color-${props.color});
     `}
-  ${props =>
+  ${(props) =>
     props.noWrap &&
     css`
       white-space: nowrap;
     `}
-  ${props =>
+  ${(props) =>
     props.align &&
     css`
       text-align: ${props.align};
@@ -29,19 +30,19 @@ const sizes = {
   h3: "lg",
   h4: "lg",
   h5: "lg",
-  h6: "lg"
+  h6: "lg",
 };
 
 const shadowSizes = {
   sm: "2px",
   md: "5px",
   lg: "10px",
-  xl: "15px"
+  xl: "15px",
 };
 
 const shadowColors = {
   white: "rgba(255, 255, 255, 0.25)",
-  black: "rgba(0, 0, 0, 0.25)"
+  black: "rgba(0, 0, 0, 0.25)",
 };
 
 export default function Heading({

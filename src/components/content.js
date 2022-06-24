@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  transform: ${props =>
+  transform: ${(props) =>
     props.offset
       ? `perspective(500px) translate3d(-10%, 0, -200px)`
       : `translate3d(0, 0, 0)`};

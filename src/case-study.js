@@ -7,12 +7,12 @@ import {
   Heading,
   Section,
   Table,
-  Text
+  Text,
 } from "./components";
 
 const shadows = {
   white: "xl-white",
-  "dark-grey": "xl-black"
+  "dark-grey": "xl-black",
 };
 
 export default function CaseStudy({ data }) {
@@ -26,9 +26,9 @@ export default function CaseStudy({ data }) {
     price,
     time_taken,
     date,
-    content
+    content,
   } = data.caseStudy;
-  const images = data.images.nodes.map(node => node.childImageSharp);
+  const images = data.images.nodes.map((node) => node.childImageSharp);
   return (
     <Layout location={path} title={`${title} Case Study`}>
       <Header image={images[image].full}>

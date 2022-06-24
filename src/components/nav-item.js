@@ -28,10 +28,10 @@ const ListItem = styled.li`
   }
 
   @media (max-width: 30em) {
-    transform: ${props =>
+    transform: ${(props) =>
       props.open ? `translate3d(0, 0, 0)` : `translate3d(-100%, 0, 0)`};
     transition: transform 0.3s ease-in-out
-      calc(0.15s + (${props => props.index} * 0.1s));
+      calc(0.15s + (${(props) => props.index} * 0.1s));
   }
 `;
 

@@ -119,10 +119,10 @@ export default function Layout({ location, title: pageTitle, children }) {
           title={pageTitle ? `${pageTitle} : ${title}` : title}
           meta={[
             { name: "description", content: description },
-            { name: "keywords", content: keywords }
+            { name: "keywords", content: keywords },
           ]}
           htmlAttributes={{
-            lang: "en"
+            lang: "en",
           }}
         />
         <Global styles={GlobalStyles} />
@@ -130,8 +130,8 @@ export default function Layout({ location, title: pageTitle, children }) {
           styles={
             navOpen && {
               body: {
-                overflowY: "hidden"
-              }
+                overflowY: "hidden",
+              },
             }
           }
         />

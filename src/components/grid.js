@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 const Container = styled.div`
   display: grid;
   gap: var(--spacing-y-lg) var(--spacing-x-md);
-  ${props =>
+  ${(props) =>
     props.columns &&
     props.columns.map((column, i) =>
       i === 0 && column > 1
@@ -24,7 +24,7 @@ const Container = styled.div`
 `
     )}
 
-  ${props =>
+  ${(props) =>
     props.verticalSeparator &&
     css`
       @media (max-width: ${props.verticalSeparator}) {
@@ -43,7 +43,7 @@ export default function Grid({
   columns,
   breakpoints = ["30em"],
   verticalSeparator,
-  children
+  children,
 }) {
   return (
     <Container

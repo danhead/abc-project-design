@@ -17,7 +17,7 @@ const triangleCoords = [
   { lat: 51.611, lng: -0.45 }, // Northwood
   { lat: 51.737, lng: -0.399 }, // St Albans
   { lat: 51.992, lng: -0.281 }, // Letchworth
-  { lat: 52.253, lng: 0.109 } // Cambridge
+  { lat: 52.253, lng: 0.109 }, // Cambridge
 ];
 
 export default function Index() {
@@ -28,7 +28,7 @@ export default function Index() {
           <Map
             initialCenter={{
               lat: 51.765,
-              lng: 0.022
+              lng: 0.022,
             }}
             zoom={7}
             mapTypeContol={false}

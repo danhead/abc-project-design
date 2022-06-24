@@ -7,34 +7,34 @@ const Container = styled.header`
   height: 50vh;
   min-height: 280px;
   color: var(--color-white);
-  ${props => props.avoidNav && `margin-top: 40px;`}
+  ${(props) => props.avoidNav && `margin-top: 40px;`}
 `;
 
 const Content = styled.div`
   position: absolute;
-  ${props =>
+  ${(props) =>
     props.posY !== "bottom" &&
     css`
       top: ${props.posY === "top" ? 0 : "50%"};
     `}
-  ${props =>
+  ${(props) =>
     props.posY === "bottom" &&
     css`
       bottom: 0;
     `}
-  ${props =>
+  ${(props) =>
     props.posX !== "right" &&
     css`
       left: ${props.posX === "left" ? 0 : "50%"};
     `}
-  ${props =>
+  ${(props) =>
     props.posX === "right" &&
     css`
       right: 0;
     `}
   transform: translate(
-    ${props => (props.posX === "middle" ? "-50%" : 0)},
-    ${props => (props.posY === "middle" ? "-50%" : 0)}
+    ${(props) => (props.posX === "middle" ? "-50%" : 0)},
+    ${(props) => (props.posY === "middle" ? "-50%" : 0)}
   );
   max-width: var(--page-max-width);
   padding: var(--spacing-y-sm) var(--spacing-x-sm);
@@ -50,7 +50,7 @@ export default function Header({
   avoidNav,
   variant,
   swap,
-  children
+  children,
 }) {
   const [posY, posX] = position.split(" ");
   return (

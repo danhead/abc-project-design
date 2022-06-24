@@ -15,7 +15,7 @@ import {
   ReviewSummary,
   Section,
   Text,
-  Tile
+  Tile,
 } from "../components";
 import Calendar from "../icons/calendar.svg";
 import CheckCircle from "../icons/check-circle.svg";
