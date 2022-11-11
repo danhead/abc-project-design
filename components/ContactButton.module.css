@@ -1,0 +1,13 @@
+.block {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-dark);
+  font-size: var(--font-size-xl);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sm {
+  font-size: var(--font-size-md);
+}

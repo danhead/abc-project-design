@@ -1,0 +1,40 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  text-align: center;
+  margin-inline: var(--spacing-xl);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.body {
+  position: relative;
+}
+
+.content {
+  margin-inline: var(--spacing-xl);
+}
+
+.prefix,
+.suffix {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.prefix {
+  top: 0;
+  left: 0;
+  transform: translateY(-66%);
+}
+
+.suffix {
+  bottom: 0;
+  right: 0;
+  transform: translateY(66%);
+}

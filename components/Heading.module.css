@@ -1,0 +1,38 @@
+.block {
+  margin: 0 0 var(---spacing-sm);
+  font-size: var(--font-size-xxl);
+}
+
+.xl {
+  font-size: var(--font-size-xl);
+}
+
+.lg {
+  font-size: var(--font-size-lg);
+}
+
+.md {
+  font-size: var(--font-size-md);
+}
+
+/*
+  text-shadow: 0 0 ${(props) => props.shadowSize}
+    ${(props) => props.shadowColor};
+  ${(props) =>
+    props.color &&
+    css`
+      color: var(--color-${props.color});
+    `}
+  ${(props) =>
+    props.noWrap &&
+    css`
+      white-space: nowrap;
+    `}
+  ${(props) =>
+    props.align &&
+    css`
+      text-align: ${props.align};
+    `}
+`;
+
+*/

@@ -1,0 +1,8 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  text-align: center;
+  color: var(--color-mid-grey);
+  align-items: center;
+}

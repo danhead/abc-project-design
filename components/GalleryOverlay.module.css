@@ -1,0 +1,64 @@
+.block {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  background-color: rgb(0, 0, 0, 0.75);
+  z-index: 20;
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  background-color: var(--color-dark-grey);
+}
+
+.close,
+.next,
+.prev {
+  position: absolute;
+  border: 0;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--color-white);
+}
+
+.close:focus,
+.next:focus,
+.prev:focus {
+  outline: 2px solid var(--color-white);
+  outline-offset: -2px;
+}
+
+.close {
+  top: 0;
+  right: 0;
+}
+
+.next,
+.prev {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

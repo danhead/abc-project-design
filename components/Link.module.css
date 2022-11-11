@@ -1,0 +1,10 @@
+.block {
+  color: var(--color-dark);
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.block:focus {
+  outline: 2px solid var(--color-dark);
+}

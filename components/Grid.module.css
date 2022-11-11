@@ -1,0 +1,70 @@
+.block {
+  --grid-cols: 1;
+  display: grid;
+  gap: var(--spacing-lg) var(--spacing-md);
+  grid-template-columns: repeat(var(--grid-cols), minmax(10px, 1fr));
+}
+
+.d2 {
+  --grid-cols: 2;
+}
+
+@media (min-width: 30em) {
+  .sm2 {
+    --grid-cols: 2;
+  }
+  .sm3 {
+    --grid-cols: 3;
+  }
+}
+@media (min-width: 40em) {
+  .md2 {
+    --grid-cols: 2;
+  }
+  .md3 {
+    --grid-cols: 3;
+  }
+  .md4 {
+    --grid-cols: 4;
+  }
+
+  .mdfillfit {
+    grid-template-columns: 1fr max-content;
+  }
+}
+/*
+  ${(props) =>
+    props.columns &&
+    props.columns.map((column, i) =>
+      i === 0 && column > 1
+        ? css`
+            grid-template-columns: repeat(${column}, minmax(10px, 1fr));
+          `
+        : css`
+  @media (min-width: ${props.breakpoints[i - 1]}) {
+    grid-template-columns: repeat(${column}, minmax(10px, 1fr));
+    ${
+      i === 1 &&
+      css`
+        gap: var(--spacing-y-lg) var(--spacing-x-lg);
+      `
+    }
+`
+    )}
+
+  ${(props) =>
+    props.verticalSeparator &&
+    css`
+      @media (max-width: ${props.verticalSeparator}) {
+        > * {
+          padding-bottom: var(--spacing-y-lg);
+        }
+
+        > :not(:last-of-type) {
+          border-bottom: 1px solid var(--color-mid-grey);
+        }
+      }
+    `}
+`;
+
+*/

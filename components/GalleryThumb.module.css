@@ -1,0 +1,11 @@
+.block {
+  position: relative;
+  border: 0;
+  background-color: transparent;
+  aspect-ratio: 1;
+}
+
+.block:focus {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 2px;
+}

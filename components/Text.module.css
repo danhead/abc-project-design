@@ -1,0 +1,50 @@
+.block {
+  margin: 0 0 var(--spacing-md);
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.xs {
+  font-size: var(--font-size-xs);
+}
+
+.sm {
+  font-size: var(--font-size-sm);
+}
+
+.md {
+  font-size: var(--font-size-md);
+}
+
+.lg {
+  font-size: var(--font-size-lg);
+}
+
+.xl {
+  font-size: var(--font-size-xl);
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.dark {
+  color: var(--color-dark);
+}
+.block em {
+  font-weight: 400;
+}

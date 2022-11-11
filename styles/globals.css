@@ -1,0 +1,59 @@
+:root {
+  --page-max-width: 960px;
+  --color-primary: #9c0905;
+  --color-secondary: #9590a8;
+  --color-tertiary: #bbcbcb;
+  --color-light: #eeedf1;
+  --color-dark: #000a61;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-light-grey: #ced;
+  --color-mid-grey: #606069;
+  --color-dark-grey: #233;
+  --color-success: #008900;
+  --color-semi-transparent: rgba(255, 255, 255, 0.75);
+  --base-font-size: 16px;
+  --line-height: 1.6;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-xxl: 1.625rem;
+  --icon-size-sm: 12px;
+  --icon-size-md: 16px;
+  --icon-size-lg: 24px;
+  --icon-size-xl: 32px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+}
+
+@media (min-width: 30em) {
+  :root {
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    --base-font-size: 18px;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Cooper Hewitt", sans-serif;
+  line-height: var(--line-height);
+  font-size: var(--base-font-size);
+  color: var(--color-dark-grey);
+}
+
+* {
+  box-sizing: border-box;
+}

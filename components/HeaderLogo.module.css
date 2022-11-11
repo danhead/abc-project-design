@@ -1,0 +1,57 @@
+.block {
+  --header-logo-filter: grayscale(100%);
+  --header-logo-opacity: 0;
+  --header-logo-top-transform: translate3d(0, 50%, 0);
+  --header-logo-bottom-transform: translate3d(0, -50%, 0) rotate(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  width: 120px;
+  height: 60px;
+  filter: var(--header-logo-filter);
+  opacity: var(--header-logo-opacity);
+  transform: var(--header-logo-top-transform);
+  transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
+    transform 0.5s ease-in 0.5s;
+}
+
+.top path:first-of-type {
+  fill: var(--color-primary);
+}
+
+.top path:last-of-type {
+  fill: var(--color-secondary);
+}
+
+.middle {
+  opacity: var(--header-logo-opacity);
+  transition: opacity 0.5s ease-in 0.75s;
+}
+
+.bottom {
+  width: 120px;
+  height: 60px;
+  filter: var(--header-logo-filter);
+  opacity: var(--header-logo-opacity);
+  transform: var(--header-logo-bottom-transform);
+  transition: opacity 0.5s ease-in, filter 0.5s ease-in 0.5s,
+    transform 0.5s ease-in 0.5s;
+}
+
+.bottom path:first-of-type {
+  fill: var(--color-dark);
+}
+
+.bottom path:last-of-type {
+  fill: var(--color-secondary);
+}
+
+.isvisible {
+  --header-logo-filter: none;
+  --header-logo-opacity: 1;
+  --header-logo-top-transform: translate3d(0, 0, 0);
+  --header-logo-bottom-transform: translate3d(0, 0, 0) rotate(180deg);
+}
