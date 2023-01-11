@@ -13,7 +13,7 @@ export default function HeaderLogo({ transition }) {
         <LogoArrowsSvg />
       </div>
       <div className={styles.middle}>
-        <Heading>ABC Project Design Ltd</Heading>
+        <Heading>ABC Project Ltd</Heading>
         <Text size="lg" noMargin>
           Easy as ABC
         </Text>

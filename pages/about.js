@@ -10,10 +10,10 @@ export default function About() {
           <em>Easy as</em> ABC
         </Text>
       </Header>
-      <Section title="About ABC Project Design">
+      <Section title="About ABC Project Ltd">
         <Text>
-          ABC Project Design Ltd is a medium sized family run business with more
-          than 30 years experience in the building and construction industry. We
+          ABC Project Ltd is a medium sized family run business with more than
+          30 years experience in the building and construction industry. We
           offer a fully certified and accredited bathroom refurbishment service.
         </Text>
         <Text>

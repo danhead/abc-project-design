@@ -4,7 +4,7 @@ import { Footer, Nav } from ".";
 import styles from "./Layout.module.css";
 
 export default function Layout({ title, children }) {
-  const pageTitle = `${title ? `${title} : ` : ""}ABC Project Design`;
+  const pageTitle = `${title ? `${title} : ` : ""}ABC Project Ltd`;
   return (
     <div className={styles.block}>
       <Head>
