@@ -29,6 +29,7 @@
 .middle {
   opacity: var(--header-logo-opacity);
   transition: opacity 0.5s ease-in 0.75s;
+  min-width: max-content;
 }
 
 .bottom {

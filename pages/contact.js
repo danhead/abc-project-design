@@ -48,15 +48,9 @@ export default function About({ apikey }) {
       </Header>
       <Section>
         <Text size="xl">
-          Are you planning a new bathroom? Are you looking for inspiration? Our
-          team are ready to help you through every step of the journey.
-        </Text>
-        <Text>
-          A typical bathroom refurbishment starts from £3,500, increasing up to
-          £20,000. Our quotes include stripping out the old bathroom, disposal
-          of rubbish, fitting the new bathroom, labour and building materials
-          for tiling, plastering, painting and decorating. It does not include
-          bathroom suites or tiles.
+          Are you planning some work on your house? Are you looking for
+          inspiration? Our team are ready to help you through every step of the
+          journey.
         </Text>
         <Grid md={2}>
           <div style={{ position: "relative" }}>

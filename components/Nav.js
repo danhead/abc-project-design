@@ -60,6 +60,21 @@ export default function Nav() {
               </Link>
               <ul className={styles.sublist}>
                 <li className={styles.listitem}>
+                  <Link href="/services/extensions" passHref>
+                    <a className={styles.link}>Extensions</a>
+                  </Link>
+                </li>
+                <li className={styles.listitem}>
+                  <Link href="/services/loft-conversions" passHref>
+                    <a className={styles.link}>Loft conversions</a>
+                  </Link>
+                </li>
+                <li className={styles.listitem}>
+                  <Link href="/services/garage-conversions" passHref>
+                    <a className={styles.link}>Garage conversions</a>
+                  </Link>
+                </li>
+                <li className={styles.listitem}>
                   <Link href="/services/bathrooms" passHref>
                     <a className={styles.link}>Bathrooms</a>
                   </Link>

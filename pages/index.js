@@ -25,6 +25,9 @@ import {
 import bannerImg from "../images/banner_bathroom.jpg";
 import bathroomImg from "../images/bathroom.jpg";
 import tilingImg from "../images/tiling.jpg";
+import extensionImg from "../images/extension.jpg";
+import officeImg from "../images/office.jpg";
+import loftImg from "../images/loft_conversion.jpg";
 import victorianImg from "../images/victorian_plumbing_logo.png";
 
 export default function Home() {
@@ -34,7 +37,40 @@ export default function Home() {
         <HeaderLogo transition />
       </Header>
       <Section title="What we do">
-        <Grid sm={2}>
+        <Grid sm={2} md={3}>
+          <Card
+            heading={
+              <Heading el="h3" size="md">
+                Extensions
+              </Heading>
+            }
+            image={extensionImg}
+            href="/services/extensions"
+          >
+            Build a house extension
+          </Card>
+          <Card
+            heading={
+              <Heading el="h3" size="md">
+                Loft conversions
+              </Heading>
+            }
+            image={loftImg}
+            href="/services/loft-conversions"
+          >
+            Add an extra bedroom
+          </Card>
+          <Card
+            heading={
+              <Heading el="h3" size="md">
+                Garage conversions
+              </Heading>
+            }
+            image={officeImg}
+            href="/services/garage-conversions"
+          >
+            Repurpose your unused garage
+          </Card>
           <Card
             heading={
               <Heading el="h3" size="md">

@@ -115,6 +115,7 @@
   margin: 0 0 0 var(--spacing-sm);
   padding: 0;
   list-style: none;
+  min-width: max-content;
 }
 
 .link {

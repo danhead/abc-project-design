@@ -24,6 +24,13 @@ export default function Bathrooms({ caseStudies }) {
           fields.
         </Text>
         <Text>
+          A typical bathroom refurbishment starts from £3,500, increasing up to
+          £20,000. Our quotes include stripping out the old bathroom, disposal
+          of rubbish, fitting the new bathroom, labour and building materials
+          for tiling, plastering, painting and decorating. It does not include
+          bathroom suites or tiles.
+        </Text>
+        <Text>
           With over 30 years experience in bathroom installation we will help
           you choose the perfect bathroom for your home. We can complete your
           whole bathroom installation including electrics, plastering, plumbing
