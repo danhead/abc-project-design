@@ -14,24 +14,21 @@ export default function Footer() {
               <Icon size="lg">
                 <PhoneSvg />
               </Icon>
-              02071013958
+              02071 013958
             </ContactButton>
-            <ContactButton href="tel:+447378839358" size="sm">
+            <ContactButton href="tel:+447979173138" size="sm">
               <Icon size="lg">
                 <MobileSvg />
               </Icon>
-              07378839358
+              07979 173138
             </ContactButton>
           </div>
           <div className={styles.buttons}>
-            <ContactButton
-              href="mailto:quotations@abcprojectdesign.com"
-              size="sm"
-            >
+            <ContactButton href="mailto:costeadany00@gmail.com" size="sm">
               <Icon size="lg">
                 <EnvelopeSvg />
               </Icon>
-              quotations@abcprojectdesign.com
+              costeadany00@gmail.com
             </ContactButton>
             <ContactButton
               href="https://www.facebook.com/people/ABC-Project-Design/100088268944294/"
